@@ -18,3 +18,15 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@layer base {
+  :root {
+    --color-heading: red;
+    --color-primary: 255 115 179;
+    --color-secondary: 111 114 185;
+  }
+}
+
+.heading-1 {
+  color: var(--color-heading);
+}

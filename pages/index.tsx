@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { Heading1 } from "../components/typography/Heading1";
 
 const Home: NextPage = () => {
   return (
@@ -14,11 +15,11 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <h1 className="text-3xl font-bold underline">
+        <Heading1>
           Portal template is a free and open source documentation website
           template. Feel free to clone it on Github, customize per your needs,
           and use it for your project.
-        </h1>
+        </Heading1>
         <p>
           It’s build with Next.js and styled with tailwindcss. Every component
           is customizable using css variables. You’re welcome to visit other
