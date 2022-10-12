@@ -28,6 +28,23 @@ a {
   }
 }
 
-.heading-1 {
-  color: var(--color-heading);
+@layer components {
+  h1.page-title {
+    @apply text-4xl font-bold;
+  }
+  p.page-subtitle {
+    @apply text-2xl text-gray-500;
+  }
+  h2.heading-2 {
+    @apply text-2xl font-bold;
+  }
+  h3.heading-3 {
+    @apply text-xl;
+  }
+  h4.heading-4 {
+    @apply text-lg;
+  }
+  h5.heading-5 {
+    @apply text-base font-bold;
+  }
 }

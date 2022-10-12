@@ -1,6 +1,14 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Popover } from "@headlessui/react";
+import { Heading2 } from "../components/typography/heading2";
+import {
+  Heading3,
+  Heading4,
+  Heading5,
+  PageSubtitle,
+  PageTitle,
+} from "../components/typography";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
@@ -78,11 +86,20 @@ const Home: NextPage = () => {
               </nav>
             </div>
             <main className="lg:col-span-9 xl:col-span-6 bg-gray-100">
-              <h1 className="xl:text-red-800">
+              <header>
+                <PageTitle>This is a page title</PageTitle>
+                <PageSubtitle>This is a page subtitle</PageSubtitle>
+              </header>
+
+              <Heading2>This is a level 2 heading</Heading2>
+              <Heading3>This is a level 3 heading</Heading3>
+              <Heading4>This is a level 4 heading</Heading4>
+              <Heading5>This is a level 5 heading</Heading5>
+              <p>
                 Portal template is a free and open source documentation website
                 template. Feel free to clone it on Github, customize per your
                 needs, and use it for your project.
-              </h1>
+              </p>
               <p>
                 It’s build with Next.js and styled with tailwindcss. Every
                 component is customizable using css variables. You’re welcome to
