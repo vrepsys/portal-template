@@ -1,6 +1,6 @@
 const navItems = [
-  { name: "Home", href: "#" },
-  { name: "Typography", href: "#" },
+  { name: "Home", href: "/" },
+  { name: "Typography", href: "/typography" },
   { name: "Image", href: "#" },
   { name: "Code Block", href: "#" },
   { name: "Callout", href: "#" },
