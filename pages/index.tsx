@@ -9,6 +9,7 @@ import {
   PageSubtitle,
   PageTitle,
 } from "../components/typography";
+import { SideNavigation } from "../components/side-navigation/SideNavigation";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
@@ -69,7 +70,7 @@ const Home: NextPage = () => {
                 <div className="pt-4 pb-3">Tabs</div>
                 <div className="pt-4 pb-3">Aside</div>
                 <div className="border-t border-gray-200 pt-4 pb-3">
-                  Navigation
+                  <SideNavigation />
                 </div>
               </Popover.Panel>
             </>
@@ -77,15 +78,12 @@ const Home: NextPage = () => {
         </Popover>
         <div className="py-6">
           <div className="mx-auto max-w-3xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-12 lg:gap-8 lg:px-8">
-            <div className="hidden lg:col-span-3 lg:block xl:col-span-2 bg-green-50">
-              <nav
-                aria-label="Side navigation"
-                className="sticky top-6 divide-y divide-gray-300"
-              >
-                Side Navigation
-              </nav>
+            <div className="hidden lg:col-span-3 lg:block xl:col-span-2">
+              <div className="sticky top-0 ">
+                <SideNavigation />
+              </div>
             </div>
-            <main className="lg:col-span-9 xl:col-span-6 bg-gray-100">
+            <main className="lg:col-span-9 xl:col-span-6">
               <header>
                 <PageTitle>This is a page title</PageTitle>
                 <PageSubtitle>This is a page subtitle</PageSubtitle>
