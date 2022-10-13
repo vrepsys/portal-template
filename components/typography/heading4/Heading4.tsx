@@ -1,5 +1,12 @@
-import { PropsWithChildren } from "react";
+import { HTMLAttributes } from "react";
 
-export const Heading4: React.FC<PropsWithChildren> = ({ children }) => {
-  return <h4 className="heading-4">{children}</h4>;
+export const Heading4: React.FC<HTMLAttributes<HTMLHeadingElement>> = ({
+  children,
+  ...props
+}) => {
+  return (
+    <h4 className="heading-4" {...props}>
+      {children}
+    </h4>
+  );
 };

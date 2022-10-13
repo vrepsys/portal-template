@@ -2,6 +2,7 @@ import Head from "next/head";
 import { PropsWithChildren } from "react";
 import { Popover } from "@headlessui/react";
 import { SideNavigation } from "../side-navigation/SideNavigation";
+import { TableOfContents } from "../table-of-contents";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
@@ -60,7 +61,9 @@ export const PageLayout: React.FC<PropsWithChildren> = ({ children }) => {
 
               <Popover.Panel as="nav" className="lg:hidden" aria-label="Global">
                 <div className="pt-4 pb-3">Tabs</div>
-                <div className="pt-4 pb-3">Aside</div>
+                <div className="pt-4 pb-3">
+                  <TableOfContents />
+                </div>
                 <div className="border-t border-gray-200 pt-4 pb-3">
                   <SideNavigation />
                 </div>
@@ -75,9 +78,13 @@ export const PageLayout: React.FC<PropsWithChildren> = ({ children }) => {
                 <SideNavigation />
               </div>
             </div>
-            <main className="lg:col-span-9 xl:col-span-6">{children}</main>
-            <aside className="hidden xl:col-span-4 xl:block bg-blue-50">
-              <div className="sticky top-6 space-y-4">Aside</div>
+            <main className="lg:col-span-9 xl:col-span-6 pb-96">
+              {children}
+            </main>
+            <aside className="hidden xl:col-span-4 xl:block">
+              <div className="sticky top-6 space-y-4">
+                <TableOfContents />
+              </div>
             </aside>
           </div>
         </div>

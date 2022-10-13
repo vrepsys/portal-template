@@ -47,4 +47,7 @@ a {
   h5.heading-5 {
     @apply text-base font-bold;
   }
+  p {
+    @apply mb-4;
+  }
 }
