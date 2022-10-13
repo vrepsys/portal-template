@@ -22,21 +22,21 @@ a {
 
 @layer base {
   :root {
-    --color-heading: red;
-    --color-primary: 255 115 179;
-    --color-secondary: 111 114 185;
+    --color-default: theme("colors.slate[900]");
+    --color-secondary: theme("colors.slate[500]");
+    --color-blend: theme("colors.slate[400]");
   }
 }
 
 @layer components {
   h1.page-title {
-    @apply text-4xl font-bold;
+    @apply text-4xl font-bold text-color-default;
   }
   p.page-subtitle {
     @apply text-2xl text-gray-500;
   }
   h2.heading-2 {
-    @apply text-2xl font-bold;
+    @apply text-2xl font-bold text-color-default;
   }
   h3.heading-3 {
     @apply text-xl;
