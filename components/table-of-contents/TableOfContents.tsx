@@ -1,21 +1,39 @@
+import { useCallback } from "react";
 import { HeadingData, useHeadingsData } from "./useHeadingsData";
 
 const Headings: React.FC<{ headings: HeadingData[] }> = ({ headings }) => {
+  const navigateToHeading = useCallback(
+    (id: string) => (e: any) => {
+      e.preventDefault();
+      document?.querySelector(`#${id}`)?.scrollIntoView({
+        behavior: "smooth",
+      });
+    },
+    []
+  );
   return (
     <ul>
       {headings?.map((heading) => {
         return (
           <>
             <li key={heading.id}>
-              <a className="text-sm" href={`#${heading.id}`}>
+              <a
+                className="text-sm"
+                href={`#${heading.id}`}
+                onClick={navigateToHeading(heading.id)}
+              >
                 {heading.title}
               </a>
               {heading.items && (
                 <ul className="ml-4">
-                  {heading.items.map((child) => (
-                    <li key={child.id}>
-                      <a className="text-sm" href={`#${child.id}`}>
-                        {child.title}
+                  {heading.items.map((childHeading) => (
+                    <li key={childHeading.id}>
+                      <a
+                        className="text-sm"
+                        href={`#${childHeading.id}`}
+                        onClick={navigateToHeading(childHeading.id)}
+                      >
+                        {childHeading.title}
                       </a>
                     </li>
                   ))}
