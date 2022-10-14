@@ -1,7 +1,11 @@
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import { HeadingData, useHeadingsData } from "./useHeadingsData";
+import { useIntersectionObserver } from "./useInteractionObserver";
 
-const Headings: React.FC<{ headings: HeadingData[] }> = ({ headings }) => {
+const Headings: React.FC<{
+  headings: HeadingData[];
+  activeId: string | undefined;
+}> = ({ headings, activeId }) => {
   const navigateToHeading = useCallback(
     (id: string) => (e: any) => {
       e.preventDefault();
@@ -18,7 +22,9 @@ const Headings: React.FC<{ headings: HeadingData[] }> = ({ headings }) => {
           <>
             <li key={heading.id}>
               <a
-                className="text-sm"
+                className={`text-sm ${
+                  heading.id === activeId ? "font-bold" : ""
+                }`}
                 href={`#${heading.id}`}
                 onClick={navigateToHeading(heading.id)}
               >
@@ -29,7 +35,9 @@ const Headings: React.FC<{ headings: HeadingData[] }> = ({ headings }) => {
                   {heading.items.map((childHeading) => (
                     <li key={childHeading.id}>
                       <a
-                        className="text-sm"
+                        className={`text-sm ${
+                          childHeading.id === activeId ? "font-bold" : ""
+                        }`}
                         href={`#${childHeading.id}`}
                         onClick={navigateToHeading(childHeading.id)}
                       >
@@ -49,11 +57,12 @@ const Headings: React.FC<{ headings: HeadingData[] }> = ({ headings }) => {
 
 export const TableOfContents: React.FC<{}> = () => {
   const { nestedHeadings } = useHeadingsData();
-
+  const [activeId, setActiveId] = useState<string>();
+  useIntersectionObserver(setActiveId);
   return (
     <nav aria-label="Table of contents">
       <div className="mb-4 font-semibold">On this page</div>
-      <Headings headings={nestedHeadings} />
+      <Headings headings={nestedHeadings} activeId={activeId} />
     </nav>
   );
 };

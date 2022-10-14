@@ -24,8 +24,8 @@ export const PageLayout: React.FC<PropsWithChildren> = ({ children }) => {
           as="header"
           className={({ open }) =>
             classNames(
-              open ? "fixed inset-0 z-40 overflow-y-auto" : "",
-              "bg-white shadow-sm lg:static lg:overflow-y-visible"
+              open ? "inset-0 z-40 overflow-y-auto" : "",
+              "bg-white shadow-sm lg:sticky lg:top-0 lg:overflow-y-visible"
             )
           }
         >
@@ -74,7 +74,7 @@ export const PageLayout: React.FC<PropsWithChildren> = ({ children }) => {
         <div className="py-6">
           <div className="mx-auto max-w-3xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-12 lg:gap-8 lg:px-8">
             <div className="hidden lg:col-span-3 lg:block xl:col-span-2">
-              <div className="sticky top-0 ">
+              <div className="sticky top-14">
                 <SideNavigation />
               </div>
             </div>
@@ -82,7 +82,7 @@ export const PageLayout: React.FC<PropsWithChildren> = ({ children }) => {
               {children}
             </main>
             <aside className="hidden xl:col-span-4 xl:block">
-              <div className="sticky top-6 space-y-4">
+              <div className="sticky top-14 space-y-4">
                 <TableOfContents />
               </div>
             </aside>
