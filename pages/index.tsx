@@ -21,23 +21,20 @@ const Home: NextPage = () => {
     <PageLayout>
       <article>
         <header>
-          <PageTitle>This is a page title</PageTitle>
-          <PageSubtitle>This is a page subtitle</PageSubtitle>
+          <PageTitle>Documentation website template</PageTitle>
+          <PageSubtitle>Portal template is a free and open source documentation website template. Feel free to clone it on Github, customize per your needs, and use it for your project.</PageSubtitle>
         </header>
         <p>
-          Portal template is a free and open source documentation website
-          template. Feel free to clone it on Github, and use it for your
-          project.
+          It’s build with Next.js and styled with tailwindcss. Every component is customizable using css variables. You’re welcome to visit other pages in this template to learn more about each components in the template. We’ve also added some tips and tricks about what it takes to build a neat documentation portal.
         </p>
         <p>
-          It’s build with Next.js and styled with tailwindcss. Every component
-          is customizable using css variables.
+          We use this template to kickstart documentation projects for our clients at Portal. Need help or just want to chat about building better documentation? Get in touch via email or Twitter.
         </p>
         <p>
-          Content content and more content. Content content and more content.
-          Content content and more content. Content content and more content.
-          Content content and more content. Content content and more content.
-          Content content and more content. Content content and more content.
+          It’s build with Next.js and styled with tailwindcss. Every component is customizable using css variables. You’re welcome to visit other pages in this template to learn more about each components in the template. We’ve also added some tips and tricks about what it takes to build a neat documentation portal.
+        </p>
+        <p>
+          We use this template to kickstart documentation projects for our clients at Portal. Need help or just want to chat about building better documentation? Get in touch via email or Twitter.
         </p>
         <Heading2>Level 2 heading</Heading2>
         <p>
@@ -46,14 +43,10 @@ const Home: NextPage = () => {
           project.
         </p>
         <p>
-          It’s build with Next.js and styled with tailwindcss. Every component
-          is customizable using css variables.
+          It’s build with Next.js and styled with tailwindcss. Every component is customizable using css variables. You’re welcome to visit other pages in this template to learn more about each components in the template. We’ve also added some tips and tricks about what it takes to build a neat documentation portal.
         </p>
         <p>
-          Content content and more content. Content content and more content.
-          Content content and more content. Content content and more content.
-          Content content and more content. Content content and more content.
-          Content content and more content. Content content and more content.
+          We use this template to kickstart documentation projects for our clients at Portal. Need help or just want to chat about building better documentation? Get in touch via email or Twitter.
         </p>
 
         <Heading3>Level 3 heading</Heading3>
@@ -77,10 +70,6 @@ const Home: NextPage = () => {
         </p>
 
         <Heading2>One more heading 2</Heading2>
-        <p>
-          Some content and more content. Content content and more content.
-          Content content and more content. Content content and more content.
-        </p>
         <p>
           Some content and more content. Content content and more content.
           Content content and more content. Content content and more content.
