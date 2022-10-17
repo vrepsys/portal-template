@@ -25,26 +25,22 @@ export const PageLayout: React.FC<PropsWithChildren> = ({ children }) => {
           className={({ open }) =>
             classNames(
               open ? "inset-0 z-40 overflow-y-auto" : "",
-              "bg-white shadow-sm lg:sticky lg:top-0 lg:overflow-y-visible"
+              "bg-white sticky top-0 lg:border-b lg:border-color-divider lg:overflow-y-visible"
             )
           }
         >
           {({ open }) => (
             <>
-              <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div className="relative flex justify-between lg:gap-8 xl:grid xl:grid-cols-12">
-                  <div className="flex md:absolute md:inset-y-0 md:left-0 lg:static xl:col-span-2">
-                    <div className="flex flex-shrink-0 items-center">
-                      <a href="#">Logo</a>
-                    </div>
+              <div className="mx-auto px-3 py-2 border-b border-color-divider lg:border-none lg:px-10 lg:max-w-[1040px] xl:max-w-[1340px]">
+
+                <div className="flex gap-2 items-center">
+                  <div className="flex grow gap-2 items-center">
+                    <a className="button" href="#">Logo</a>
+                    <a className="button search w-96 hidden lg:inline-block" href="#">Search</a>
                   </div>
-                  <div className="min-w-0 flex-1 md:px-8 lg:px-0 xl:col-span-6">
-                    <div className="flex items-center px-6 py-4 md:mx-auto md:max-w-3xl lg:mx-0 lg:max-w-none xl:px-0">
-                      <div className="w-full">Search</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center md:absolute md:inset-y-0 md:right-0 lg:hidden">
-                    <Popover.Button className="-mx-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+
+                  <div className="shrink lg:hidden">
+                    <Popover.Button className="button w-9 h-9 flex justify-center items-center">
                       <span className="sr-only">Open menu</span>
                       {open ? (
                         <span className="material-symbols-outlined">close</span>
@@ -53,18 +49,25 @@ export const PageLayout: React.FC<PropsWithChildren> = ({ children }) => {
                       )}
                     </Popover.Button>
                   </div>
-                  <div className="hidden lg:flex lg:items-center lg:justify-end xl:col-span-4">
-                    Tabs
+                  <div className="hidden lg:flex lg:gap-2 lg:items-center lg:shrink lg:justify-end">
+                    <a className="button" href="#">Button one</a>
+                    <a className="button" href="#">Button two</a>
                   </div>
                 </div>
               </div>
 
-              <Popover.Panel as="nav" className="lg:hidden" aria-label="Global">
-                <div className="pt-4 pb-3">Tabs</div>
-                <div className="pt-4 pb-3">
+              <Popover.Panel as="nav" className="px-8 bg-slate-50 lg:hidden" aria-label="Global">
+                <div className="flex gap-3 flex-col items-center py-6">
+                  <a className="button search w-full mb-3" href="#">Search</a>
+                  <a className="button w-full text-center" href="#">Button one</a>
+                  <a className="button w-full text-center" href="#">Button two</a>
+                </div>
+                <hr className="mx-2 bg-color-divider"/>
+                <div className="pt-3 pb-5">
                   <TableOfContents />
                 </div>
-                <div className="border-t border-gray-200 pt-4 pb-3">
+                <hr className="mx-2 bg-color-divider"/>
+                <div className="pt-3 pb-5">
                   <SideNavigation />
                 </div>
               </Popover.Panel>
@@ -72,17 +75,20 @@ export const PageLayout: React.FC<PropsWithChildren> = ({ children }) => {
           )}
         </Popover>
         <div>
-          <div className="mx-auto max-w-3xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-12 lg:gap-8 lg:px-8">
-            <div className="hidden lg:col-span-3 lg:block xl:col-span-2">
-              <div className="sticky top-14">
+          <div className="mx-auto px-5 lg:px-10 lg:grid lg:gap-14 lg:max-w-[1040px] lg:grid-cols-page-tablet xl:max-w-[1340px] xl:grid-cols-page-desktop">
+            <div className="hidden lg:block">
+              <div className="sticky top-12.5 mt-8">
+                <div className="xl:hidden">
+                  <TableOfContents />
+                </div>
                 <SideNavigation />
               </div>
             </div>
-            <main className="lg:col-span-9 xl:col-span-6 pb-96">
+            <main className="mt-8 lg:mt-12">
               {children}
             </main>
-            <aside className="hidden xl:col-span-4 xl:block">
-              <div className="sticky top-14 space-y-4">
+            <aside className="hidden xl:block">
+              <div className="sticky top-12.5 mt-8 space-y-4">
                 <TableOfContents />
               </div>
             </aside>

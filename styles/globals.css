@@ -20,25 +20,27 @@ a {
 
 * {
   box-sizing: border-box;
+  @apply transition-all;
 }
 
 @layer base {
   :root {
     --color-default: theme("colors.slate[900]");
-    --color-secondary: theme("colors.slate[500]");
+    --color-secondary: theme("colors.slate[600]");
     --color-tertiary: theme("colors.slate[400]");
+    --color-divider: theme("colors.slate[200]");
   }
 }
 
 @layer components {
   h1.page-title {
-    @apply font-serif text-title text-color-default mt-12 mb-3 scroll-mt-16;
+    @apply font-serif text-title-mobile lg:text-title text-color-default mb-3 scroll-mt-16;
   }
   h2.heading-2 {
-    @apply font-serif text-headline-largest text-color-default mt-8 mb-3 scroll-mt-16;
+    @apply font-serif text-headline-largest-mobile lg:text-headline-largest text-color-default mt-6 lg:mt-8 mb-3 scroll-mt-16;
   }
   h3.heading-3 {
-    @apply font-serif text-headline-large text-color-default mt-8 mb-3 scroll-mt-16;
+    @apply font-serif text-headline-large-mobile lg:text-headline-large text-color-default mt-6 lg:mt-8 mb-3 scroll-mt-16;
   }
   h4.heading-4 {
     @apply font-serif text-headline-medium text-color-default mt-6 mb-3 scroll-mt-16;
@@ -58,4 +60,52 @@ a {
   p small {
     @apply font-sans text-small text-color-default mt-3 mb-3;
   }
+
+  .button {
+    @apply font-sans font-medium text-base text-color-default inline-block rounded px-2 py-1;
+  }
+  .button:hover {
+    @apply text-indigo-700 bg-indigo-50;
+  }
+  .button:active {
+    @apply text-indigo-900 bg-indigo-100;
+  }
+  .button.small {
+    @apply text-small font-medium;
+  }
+  .button.secondary {
+    @apply text-color-secondary;
+  }
+  .button.secondary:hover {
+    @apply text-indigo-700;
+  }
+  .button.secondary:active {
+    @apply text-indigo-900;
+  }
+  .button.selected {
+    @apply text-indigo-700 bg-indigo-50;
+  }
+  .button.search {
+    @apply bg-slate-100 border border-color-divider relative;
+  }
+  .button.search:hover {
+    @apply text-indigo-700 bg-indigo-50 border-indigo-100;
+  }
+  .button.search:active {
+    @apply text-indigo-900 bg-indigo-100 border-indigo-200;
+  }
+  .button.search::after {
+    @apply content-['/'] text-color-tertiary text-small font-bold inline-block bg-slate-200 rounded-sm w-5 h-5 text-center absolute right-2 top-2;
+  }
+  .button.search:hover::after {
+    @apply text-indigo-400 bg-indigo-100;
+  }
+
+  .list-headline {
+    @apply text-base font-bold pt-4 pb-2 px-2;
+  }
+  .list-headline.small {
+    @apply text-small font-bold pt-4 pb-2 px-2;
+  }
+
 }

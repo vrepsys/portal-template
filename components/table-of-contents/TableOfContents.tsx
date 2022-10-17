@@ -20,10 +20,10 @@ const Headings: React.FC<{
       {headings?.map((heading) => {
         return (
           <>
-            <li key={heading.id}>
+            <li className="my-1" key={heading.id}>
               <a
-                className={`text-sm ${
-                  heading.id === activeId ? "font-bold" : ""
+                className={`button secondary block lg:small xl:inline-block ${
+                  heading.id === activeId ? "selected" : ""
                 }`}
                 href={`#${heading.id}`}
                 onClick={navigateToHeading(heading.id)}
@@ -33,10 +33,10 @@ const Headings: React.FC<{
               {heading.items && (
                 <ul className="ml-4">
                   {heading.items.map((childHeading) => (
-                    <li key={childHeading.id}>
+                    <li className="my-1" key={childHeading.id}>
                       <a
-                        className={`text-sm ${
-                          childHeading.id === activeId ? "font-bold" : ""
+                        className={`button secondary block lg:small xl:inline-block ${
+                          childHeading.id === activeId ? "selected" : ""
                         }`}
                         href={`#${childHeading.id}`}
                         onClick={navigateToHeading(childHeading.id)}
@@ -61,7 +61,7 @@ export const TableOfContents: React.FC<{}> = () => {
   useIntersectionObserver(setActiveId);
   return (
     <nav aria-label="Table of contents">
-      <div className="mb-4 font-semibold">On this page</div>
+      <div className="list-headline lg:small">On this page</div>
       <Headings headings={nestedHeadings} activeId={activeId} />
     </nav>
   );

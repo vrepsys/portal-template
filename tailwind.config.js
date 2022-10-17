@@ -16,16 +16,24 @@ module.exports = {
     },
     fontSize: {
       'base': ['1rem', {
-        lineHeight: '1.5rem',
+        lineHeight: '1.75rem',
         letterSpacing: '0.0125rem',
         fontWeight: '400',
       }],
     },
     extend: {
+      spacing: {
+        '12.5': '3.25rem',
+      },
+      gridTemplateColumns: {
+        'page-tablet':'15rem 1fr',
+        'page-desktop': '15rem 1fr 15rem',
+      },
       colors: {
         "color-default": "var(--color-default)",
         "color-secondary": "var(--color-secondary)",
         "color-tertiary": "var(--color-tertiary)",
+        "color-divider": "var(--color-divider)",
       },
       fontSize: {
         'title': ['2.25rem', {
@@ -67,6 +75,21 @@ module.exports = {
           lineHeight: '1.25rem',
           letterSpacing: '0.0125rem',
           fontWeight: '400',
+        }],
+        'title-mobile': ['2rem', {
+          lineHeight: '2.5rem',
+          letterSpacing: '0.025rem',
+          fontWeight: '700',
+        }],
+        'headline-largest-mobile': ['1.5rem', {
+          lineHeight: '2rem',
+          letterSpacing: '0.025rem',
+          fontWeight: '700',
+        }],
+        'headline-large-mobile': ['1.25rem', {
+          lineHeight: '1.5rem',
+          letterSpacing: '0.025rem',
+          fontWeight: '700',
         }],
       }
     },

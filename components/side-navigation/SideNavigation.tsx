@@ -18,21 +18,25 @@ function classNames(...classes: string[]) {
 export const SideNavigation: React.FC<{}> = () => {
   return (
     <div>
-      <nav className="mt-5 flex-1 space-y-1 px-2" aria-label="Side navigation">
-        {navItems.map((item) => (
-          <a
-            key={item.name}
-            href={item.href}
-            className={classNames(
-              item.href === "active-href"
-                ? "bg-gray-400 text-black"
-                : "text-gray-600 hover:text-gray-900 hover:bg-gray-100",
-              "group flex items-center px-2 py-2 text-sm font-medium rounded-md"
-            )}
-          >
-            <span className="flex-1">{item.name}</span>
-          </a>
-        ))}
+      <nav aria-label="Side navigation">
+        <div className="list-headline lg:small">Getting Started</div>
+        <ul>
+          {navItems.map((item) => (
+            <li className="my-1">
+              <a
+                key={item.name}
+                href={item.href}
+                className={classNames(
+                  item.href === "active-href"
+                    ? "selected"
+                    : "button secondary block lg:small"
+                )}
+              >
+                <span className="flex-1">{item.name}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
       </nav>
     </div>
   );
