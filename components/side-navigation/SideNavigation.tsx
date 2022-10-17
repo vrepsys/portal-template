@@ -21,8 +21,8 @@ export const SideNavigation: React.FC<{}> = () => {
       <nav aria-label="Side navigation">
         <div className="list-headline lg:small">Getting Started</div>
         <ul>
-          {navItems.map((item) => (
-            <li className="my-1">
+          {navItems.map((item, i) => (
+            <li key={i} className="my-1">
               <a
                 key={item.name}
                 href={item.href}
