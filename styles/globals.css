@@ -68,7 +68,6 @@ a {
     @apply font-mono bg-slate-100 border border-color-divider rounded px-1 font-medium;
   }
   article a {
-    /* @apply text-indigo-700 underline underline-offset-4; */
     @apply text-indigo-700 border-b border-color-divider;
   }
   article a:hover {
@@ -161,5 +160,4 @@ a {
   .list-headline.small {
     @apply text-small font-bold pt-4 pb-2 px-2;
   }
-
 }

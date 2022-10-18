@@ -15,19 +15,22 @@ module.exports = {
       "body": ["Inter"],
     },
     fontSize: {
-      'base': ['1rem', {
-        lineHeight: '1.75rem',
-        letterSpacing: '0.0125rem',
-        fontWeight: '400',
-      }],
+      base: [
+        "1rem",
+        {
+          lineHeight: "1.75rem",
+          letterSpacing: "0.0125rem",
+          fontWeight: "400",
+        },
+      ],
     },
     extend: {
       spacing: {
-        '12.5': '3.25rem',
+        12.5: "3.25rem",
       },
       gridTemplateColumns: {
-        'page-tablet':'15rem 1fr',
-        'page-desktop': '15rem 1fr 15rem',
+        "page-tablet": "15rem 1fr",
+        "page-desktop": "15rem 1fr 15rem",
       },
       colors: {
         "color-default": "var(--color-default)",

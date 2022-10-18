@@ -9,6 +9,34 @@ const navItems = [
   { name: "Blockquote", href: "#" },
   { name: "Divider", href: "#" },
   { name: "Card list", href: "#" },
+  { name: "Item", href: "#" },
+  { name: "Item", href: "#" },
+  { name: "Item", href: "#" },
+  { name: "Item", href: "#" },
+  { name: "Item", href: "#" },
+  { name: "Item", href: "#" },
+  { name: "Item", href: "#" },
+  { name: "Item", href: "#" },
+  { name: "Item", href: "#" },
+  { name: "Item", href: "#" },
+  { name: "Item", href: "#" },
+  { name: "Item", href: "#" },
+  { name: "Item", href: "#" },
+  { name: "Item", href: "#" },
+  { name: "Item", href: "#" },
+  { name: "Item", href: "#" },
+  { name: "Item", href: "#" },
+  { name: "Item", href: "#" },
+  { name: "Item", href: "#" },
+  { name: "Item", href: "#" },
+  { name: "Item", href: "#" },
+  { name: "Item", href: "#" },
+  { name: "Item", href: "#" },
+  { name: "Item", href: "#" },
+  { name: "Item", href: "#" },
+  { name: "Item", href: "#" },
+  { name: "Item", href: "#" },
+  { name: "Item", href: "#" },
 ];
 
 function classNames(...classes: string[]) {
@@ -17,27 +45,25 @@ function classNames(...classes: string[]) {
 
 export const SideNavigation: React.FC<{}> = () => {
   return (
-    <div>
-      <nav aria-label="Side navigation">
-        <div className="list-headline lg:small">Getting Started</div>
-        <ul>
-          {navItems.map((item, i) => (
-            <li key={i} className="my-1">
-              <a
-                key={item.name}
-                href={item.href}
-                className={classNames(
-                  item.href === "active-href"
-                    ? "selected"
-                    : "button secondary block lg:small"
-                )}
-              >
-                <span className="flex-1">{item.name}</span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </div>
+    <nav aria-label="Side navigation">
+      <div className="list-headline lg:small">Getting Started</div>
+      <ul>
+        {navItems.map((item, i) => (
+          <li key={i} className="my-1">
+            <a
+              key={item.name}
+              href={item.href}
+              className={classNames(
+                item.href === "active-href"
+                  ? "selected"
+                  : "button secondary block lg:small"
+              )}
+            >
+              <span className="flex-1">{item.name}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 };
