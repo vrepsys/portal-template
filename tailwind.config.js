@@ -10,7 +10,7 @@ module.exports = {
     fontFamily: {
       "sans": ["Inter", "ui-sans-serif", "system-ui"],
       "serif": ['"Source Serif Pro"',"ui-serif", "Georgia"],
-      "mono": ["ui-monospace", "SFMono-Regular"],
+      "mono": ["Source Code Pro","ui-monospace", "SFMono-Regular"],
       "display": ["Oswald"],
       "body": ["Inter"],
     },
@@ -54,24 +54,24 @@ module.exports = {
         'headline-medium': ['1.25rem', {
           lineHeight: '1.75rem',
           letterSpacing: '0.025rem',
-          fontWeight: '400',
+          fontWeight: '600',
         }],
         'headline-small': ['1rem', {
           lineHeight: '1.5rem',
           letterSpacing: '0.05rem',
-          fontWeight: '700',
+          fontWeight: '500',
         }],
-        'headline-smallest': ['0.875rem', {
+        'headline-smallest': ['0.8125rem', {
           lineHeight: '1.25rem',
           letterSpacing: '0.05rem',
-          fontWeight: '700',
+          fontWeight: '500',
         }],
         'subtitle': ['1.25rem', {
           lineHeight: '1.75rem',
           letterSpacing: '0.0125rem',
           fontWeight: '400',
         }],
-        'small': ['0.875rem', {
+        'small': ['0.8125rem', {
           lineHeight: '1.25rem',
           letterSpacing: '0.0125rem',
           fontWeight: '400',

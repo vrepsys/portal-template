@@ -5,7 +5,7 @@ const navItems = [
   { name: "Code Block", href: "/codeBlock" },
   { name: "Callout", href: "#" },
   { name: "List", href: "#" },
-  { name: "Table", href: "#" },
+  { name: "Table", href: "/table" },
   { name: "Blockquote", href: "#" },
   { name: "Divider", href: "#" },
   { name: "Card list", href: "#" },

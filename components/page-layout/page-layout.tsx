@@ -84,7 +84,7 @@ export const PageLayout: React.FC<PropsWithChildren> = ({ children }) => {
                 <SideNavigation />
               </div>
             </div>
-            <main className="mt-8 lg:mt-12">
+            <main className="my-8 lg:my-12">
               {children}
             </main>
             <aside className="hidden xl:block">
