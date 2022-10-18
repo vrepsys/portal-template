@@ -148,7 +148,7 @@ const Typography: NextPage = () => {
               <td><code>* *</code>,<code>_ _</code></td>
             </tr>
             <tr>
-              <td><em>Underline</em></td>
+              <td><u>Underline</u></td>
               <td><code>&lt;u&gt;</code></td>
               <td>Not defined</td>
             </tr>
