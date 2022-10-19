@@ -1,46 +1,18 @@
 const navItems = [
-  { name: "Home", href: "/" },
-  { name: "Typography", href: "/typography" },
-  { name: "Image", href: "#" },
-  { name: "Code Block", href: "/codeBlock" },
-  { name: "Callout", href: "#" },
-  { name: "List", href: "#" },
-  { name: "Table", href: "/table" },
-  { name: "Blockquote", href: "#" },
-  { name: "Divider", href: "#" },
-  { name: "Card list", href: "#" },
-  { name: "Item", href: "#" },
-  { name: "Item", href: "#" },
-  { name: "Item", href: "#" },
-  { name: "Item", href: "#" },
-  { name: "Item", href: "#" },
-  { name: "Item", href: "#" },
-  { name: "Item", href: "#" },
-  { name: "Item", href: "#" },
-  { name: "Item", href: "#" },
-  { name: "Item", href: "#" },
-  { name: "Item", href: "#" },
-  { name: "Item", href: "#" },
-  { name: "Item", href: "#" },
-  { name: "Item", href: "#" },
-  { name: "Item", href: "#" },
-  { name: "Item", href: "#" },
-  { name: "Item", href: "#" },
-  { name: "Item", href: "#" },
-  { name: "Item", href: "#" },
-  { name: "Item", href: "#" },
-  { name: "Item", href: "#" },
-  { name: "Item", href: "#" },
-  { name: "Item", href: "#" },
-  { name: "Item", href: "#" },
-  { name: "Item", href: "#" },
-  { name: "Item", href: "#" },
-  { name: "Item", href: "#" },
-  { name: "Item", href: "#" },
+  { name: 'Home', href: '/' },
+  { name: 'Typography', href: '/typography' },
+  { name: 'Image', href: '#' },
+  { name: 'Code Block', href: '/codeBlock' },
+  { name: 'Callout', href: '#' },
+  { name: 'List', href: '#' },
+  { name: 'Table', href: '/table' },
+  { name: 'Blockquote', href: '#' },
+  { name: 'Divider', href: '#' },
+  { name: 'Card list', href: '#' },
 ];
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ');
 }
 
 export const SideNavigation: React.FC<{}> = () => {
@@ -54,9 +26,7 @@ export const SideNavigation: React.FC<{}> = () => {
               key={item.name}
               href={item.href}
               className={classNames(
-                item.href === "active-href"
-                  ? "selected"
-                  : "button secondary block lg:small"
+                item.href === 'active-href' ? 'selected' : 'button secondary block lg:small'
               )}
             >
               <span className="flex-1">{item.name}</span>

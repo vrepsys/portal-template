@@ -1,26 +1,13 @@
-import Head from "next/head";
-import { Fragment, PropsWithChildren } from "react";
-import { Popover } from "@headlessui/react";
-import { SideNavigation } from "../side-navigation/SideNavigation";
-import { TableOfContents } from "../table-of-contents";
+import Head from 'next/head';
+import { Fragment, PropsWithChildren } from 'react';
+import { Popover } from '@headlessui/react';
+import { SideNavigation } from '../side-navigation';
+import { TableOfContents } from '../table-of-contents';
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ');
 }
 
-interface RepeatProps extends PropsWithChildren {
-  times: number;
-}
-
-const Repeat: React.FC<RepeatProps> = ({ times, children }) => {
-  return (
-    <>
-      {Array(times)
-        .fill(1)
-        .map(() => children)}
-    </>
-  );
-};
 export const PageLayout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <>
@@ -38,8 +25,8 @@ export const PageLayout: React.FC<PropsWithChildren> = ({ children }) => {
             <>
               <header
                 className={classNames(
-                  open ? "inset-0 z-50 overflow-y-auto" : "",
-                  "bg-white sticky top-0 lg:border-b lg:border-color-divider lg:overflow-y-visible h-14"
+                  open ? 'inset-0 z-50 overflow-y-auto' : '',
+                  'bg-white sticky top-0 lg:border-b lg:border-color-divider lg:overflow-y-visible h-14'
                 )}
               >
                 <div className="mx-auto px-3 py-2 border-b border-color-divider lg:border-none lg:px-10 lg:w-[1040px] xl:w-[1340px] h-14">
@@ -48,10 +35,7 @@ export const PageLayout: React.FC<PropsWithChildren> = ({ children }) => {
                       <a className="button" href="#">
                         Logo
                       </a>
-                      <a
-                        className="button search w-96 hidden lg:inline-block"
-                        href="#"
-                      >
+                      <a className="button search w-96 hidden lg:inline-block" href="#">
                         Search
                       </a>
                     </div>
@@ -60,13 +44,9 @@ export const PageLayout: React.FC<PropsWithChildren> = ({ children }) => {
                       <Popover.Button className="button w-9 h-9 flex justify-center items-center">
                         <span className="sr-only">Open menu</span>
                         {open ? (
-                          <span className="material-symbols-outlined">
-                            close
-                          </span>
+                          <span className="material-symbols-outlined">close</span>
                         ) : (
-                          <span className="material-symbols-outlined">
-                            menu
-                          </span>
+                          <span className="material-symbols-outlined">menu</span>
                         )}
                       </Popover.Button>
                     </div>
@@ -110,17 +90,13 @@ export const PageLayout: React.FC<PropsWithChildren> = ({ children }) => {
           )}
         </Popover>
         <div className="mx-auto px-5 lg:px-10 lg:grid lg:gap-14 lg:w-[1040px] lg:grid-cols-page-tablet xl:w-[1340px] xl:grid-cols-page-desktop">
-          <div className="hidden lg:block border-r border-r-color-divider bg-purple-50 sticky top-14 pt-8 overflow-y-scroll h-[calc(100vh_-_theme(spacing.14))]">
+          <div className="hidden lg:block border-r border-r-color-divider sticky top-14 pt-8 overflow-y-scroll h-[calc(100vh_-_theme(spacing.14))]">
             <SideNavigation />
           </div>
-          <main className="pb-96 bg-green-100 pt-8">{children}</main>
-          <aside className="hidden lg:block border-r-color-divider bg-fuchsia-50 sticky top-14 pt-8 overflow-y-scroll h-[calc(100vh_-_theme(spacing.14))]">
+          <main className="pb-96 pt-8">{children}</main>
+          <aside className="hidden lg:block border-r-color-divider sticky top-14 pt-8 overflow-y-scroll h-[calc(100vh_-_theme(spacing.14))]">
             <div className="">
               <TableOfContents />
-              <Repeat times={40}>
-                Item
-                <br />
-              </Repeat>
             </div>
           </aside>
         </div>
