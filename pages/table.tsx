@@ -2,7 +2,7 @@ import { NextPage } from "next";
 import { PageLayout } from "../components/page-layout";
 import { PageSubtitle, PageTitle } from "../components/typography";
 
-const CodeBlock: NextPage = () => {
+const TablePage: NextPage = () => {
   return (
     <PageLayout>
       <article>
@@ -51,4 +51,4 @@ const CodeBlock: NextPage = () => {
   );
 };
 
-export default CodeBlock;
+export default TablePage;

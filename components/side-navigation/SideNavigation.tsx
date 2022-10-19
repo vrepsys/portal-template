@@ -1,13 +1,13 @@
 const navItems = [
   { name: 'Home', href: '/' },
   { name: 'Typography', href: '/typography' },
-  { name: 'Image', href: '#' },
-  { name: 'Code Block', href: '/codeblock' },
+  { name: 'Image', href: '/image' },
+  { name: 'Code Block', href: '/codeBlock' },
   { name: 'Callout', href: '#' },
-  { name: 'List', href: '#' },
+  { name: 'List', href: '/list' },
   { name: 'Table', href: '/table' },
-  { name: 'Blockquote', href: '#' },
-  { name: 'Divider', href: '#' },
+  { name: 'Blockquote', href: '/blockQuote' },
+  { name: 'Divider', href: '/divider' },
   { name: 'Card list', href: '#' },
 ];
 
