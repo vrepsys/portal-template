@@ -24,7 +24,9 @@ module.exports = {
     extend: {
       spacing: {
         12.5: '3.25rem',
-        'main-content-width': 'var(--main-content-width)',
+      },
+      maxWidth: {
+        'main-content': 'var(--main-content-width)',
       },
       gridTemplateColumns: {
         'page-tablet': '15rem var(--main-content-width)',
