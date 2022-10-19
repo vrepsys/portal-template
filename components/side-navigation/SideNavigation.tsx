@@ -3,12 +3,12 @@ const navItems = [
   { name: 'Typography', href: '/typography' },
   { name: 'Image', href: '/image' },
   { name: 'Code Block', href: '/codeBlock' },
-  { name: 'Callout', href: '#' },
+  { name: 'Callout', href: '/callout' },
   { name: 'List', href: '/list' },
   { name: 'Table', href: '/table' },
   { name: 'Blockquote', href: '/blockQuote' },
   { name: 'Divider', href: '/divider' },
-  { name: 'Card list', href: '#' },
+  { name: 'Card list', href: '/cardList' },
 ];
 
 function classNames(...classes: string[]) {

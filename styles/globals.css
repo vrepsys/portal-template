@@ -76,6 +76,12 @@ a {
   article ol li {
     @apply ml-5;
   }
+  article ul li::marker {
+    @apply text-color-tertiary;
+  }
+  article ol li::marker {
+    @apply text-color-secondary;
+  }
   article ul ul,
   article ol ol {
     @apply my-1;
@@ -128,10 +134,13 @@ a {
     @apply px-2 py-1 text-color-secondary;
   }
   article table tbody td {
-    @apply border-b border-l border-color-divider;
+    @apply border-b border-color-divider;
   }
   article table tbody tr:first-child td {
     @apply border-t;
+  }
+  article table tbody td:first-child {
+    @apply border-l;
   }
   article table tbody td:last-child {
     @apply border-r;
@@ -140,16 +149,16 @@ a {
     @apply bg-slate-50;
   }
   article table tbody tr:first-child td:first-child {
-    @apply rounded-tl;
+    @apply rounded-tl-lg;
   }
   article table tbody tr:first-child td:last-child {
-    @apply rounded-tr;
+    @apply rounded-tr-lg;
   }
   article table tbody tr:last-child td:first-child {
-    @apply rounded-bl;
+    @apply rounded-bl-lg;
   }
   article table tbody tr:last-child td:last-child {
-    @apply rounded-br;
+    @apply rounded-br-lg;
   }
 
   .button {
