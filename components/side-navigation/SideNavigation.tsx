@@ -1,3 +1,5 @@
+import { Button } from '../button';
+
 const navItems = [
   { name: 'Home', href: '/' },
   { name: 'Typography', href: '/typography' },
@@ -11,26 +13,26 @@ const navItems = [
   { name: 'Card list', href: '#' },
 ];
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
+interface Props {
+  selectedPath: string;
 }
 
-export const SideNavigation: React.FC<{}> = () => {
+export const SideNavigation: React.FC<Props> = ({ selectedPath }) => {
   return (
     <nav aria-label="Side navigation">
       <div className="list-headline lg:small">Getting Started</div>
-      <ul>
+      <ul className="pr-2">
         {navItems.map((item, i) => (
           <li key={i} className="my-1">
-            <a
+            <Button
               key={item.name}
-              href={item.href}
-              className={classNames(
-                item.href === 'active-href' ? 'selected' : 'button secondary block lg:small'
-              )}
+              to={item.href}
+              selected={item.href === selectedPath}
+              style="secondary"
+              className="lg:small"
             >
-              <span className="flex-1">{item.name}</span>
-            </a>
+              {item.name}
+            </Button>
           </li>
         ))}
       </ul>
