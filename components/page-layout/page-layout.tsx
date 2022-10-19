@@ -3,12 +3,14 @@ import { Fragment, PropsWithChildren } from 'react';
 import { Popover } from '@headlessui/react';
 import { SideNavigation } from '../side-navigation';
 import { TableOfContents } from '../table-of-contents';
+import { useRouter } from 'next/router';
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
 }
 
 export const PageLayout: React.FC<PropsWithChildren> = ({ children }) => {
+  const { pathname } = useRouter();
   return (
     <>
       <Head>
@@ -25,8 +27,8 @@ export const PageLayout: React.FC<PropsWithChildren> = ({ children }) => {
             <>
               <header
                 className={classNames(
-                  open ? 'inset-0 z-50 overflow-y-auto' : '',
-                  'bg-white sticky top-0 lg:border-b lg:border-color-divider lg:overflow-y-visible h-14'
+                  open ? 'inset-0 overflow-y-auto' : '',
+                  'bg-white sticky top-0 lg:border-b lg:border-color-divider lg:overflow-y-visible h-14 z-50'
                 )}
               >
                 <div className="mx-auto px-3 py-2 border-b border-color-divider lg:border-none lg:px-10 lg:w-[1040px] xl:w-[1340px] h-14">
@@ -83,7 +85,7 @@ export const PageLayout: React.FC<PropsWithChildren> = ({ children }) => {
                 </div>
                 <hr className="mx-2 bg-color-divider" />
                 <div className="pt-3 pb-5">
-                  <SideNavigation />
+                  <SideNavigation selectedPath={pathname} />
                 </div>
               </Popover.Panel>
             </>
@@ -91,7 +93,7 @@ export const PageLayout: React.FC<PropsWithChildren> = ({ children }) => {
         </Popover>
         <div className="mx-auto px-5 lg:px-10 flex justify-center lg:grid lg:gap-14 lg:grid-cols-page-tablet xl:grid-cols-page-desktop">
           <div className="hidden lg:block border-r border-r-color-divider sticky top-14 pt-8 overflow-y-scroll h-[calc(100vh_-_theme(spacing.14))]">
-            <SideNavigation />
+            <SideNavigation selectedPath={pathname} />
           </div>
           <main className="pb-96 pt-8 max-w-main-content">{children}</main>
           <aside className="hidden lg:block border-r-color-divider sticky top-14 pt-8 overflow-y-scroll h-[calc(100vh_-_theme(spacing.14))]">
