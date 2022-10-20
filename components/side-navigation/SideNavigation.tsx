@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import { Button } from '../button';
 
 const navItems = [
@@ -13,21 +14,18 @@ const navItems = [
   { name: 'Card list', href: '/card-list' },
 ];
 
-interface Props {
-  selectedPath: string;
-}
-
-export const SideNavigation: React.FC<Props> = ({ selectedPath }) => {
+export const SideNavigation: React.FC = () => {
+  const { pathname } = useRouter();
   return (
-    <nav aria-label="Side navigation">
+    <nav aria-label="Side navigation" className="pr-2">
       <div className="list-headline lg:small">Getting Started</div>
-      <ul className="pr-2">
+      <ul>
         {navItems.map((item, i) => (
           <li key={i} className="my-1">
             <Button
               key={item.name}
               to={item.href}
-              selected={item.href === selectedPath}
+              selected={item.href === pathname}
               style="secondary"
               className="lg:small"
             >
