@@ -5,7 +5,6 @@ const theme: {
 } = {
   'code[class*="language-"]': {
     color: '#c5c8c6',
-    textShadow: '0 1px rgba(0, 0, 0, 0.3)',
     fontFamily: "Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace",
     direction: 'ltr',
     textAlign: 'left',
@@ -23,7 +22,6 @@ const theme: {
   },
   'pre[class*="language-"]': {
     color: '#c5c8c6',
-    textShadow: '0 1px rgba(0, 0, 0, 0.3)',
     fontFamily: "Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace",
     direction: 'ltr',
     textAlign: 'left',

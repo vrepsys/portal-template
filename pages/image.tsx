@@ -1,6 +1,9 @@
-import { NextPage } from "next";
-import { PageLayout } from "../components/page-layout";
-import { PageSubtitle, PageTitle } from "../components/typography";
+import { NextPage } from 'next';
+import { Image } from '../components/image';
+import { PageLayout } from '../components/page-layout';
+import { Heading2, PageSubtitle, PageTitle } from '../components/typography';
+import exoplanet from 'public/exoplanet.jpeg';
+import { CodeBlock } from '../components/code-block';
 
 const ImagePage: NextPage = () => {
   return (
@@ -8,15 +11,36 @@ const ImagePage: NextPage = () => {
       <article>
         <header>
           <PageTitle>Image</PageTitle>
-          <PageSubtitle>
-            Learn more about table components in this template
-          </PageSubtitle>
+          <PageSubtitle>Learn about the image component</PageSubtitle>
         </header>
-        <p>Image is here.</p>
-        <figure className="my-3">
-            <img alt="planet" src="/planet.png" className="rounded-lg border border-color-divider"/>
-            <figcaption className="text-center text-small italic text-color-secondary">This is a caption for the image</figcaption>
-        </figure>
+        <p>
+          The <code>Image</code> component is uses a <a href="https://nextjs.org/">Next.js</a>{' '}
+          <a href="https://nextjs.org/docs/api-reference/next/image">image component</a> underneath.
+          As a result the image is always served in a correct size, prevents{' '}
+          <a href="https://nextjs.org/learn/seo/web-performance/cls">Cumulative Layout Shift</a>,
+          ensures faster page loads and comes with{' '}
+          <a href="https://nextjs.org/docs/basic-features/image-optimization">other benefits</a>.
+        </p>
+        <p>
+          Our image component wraps the image into a <code>figure</code> with an optional{' '}
+          <code>figcaption</code>. The caption may be specified using the <code>caption</code> prop
+          in the <code>Image</code> component.
+        </p>
+        <Heading2>Example</Heading2>
+        <CodeBlock language="jsx">
+          {"import exoplanet from 'public/exoplanet.jpeg'\n" +
+            `<Image src={exoplanet}\n` +
+            `       caption="Artist's impression of K2-18b. K2-18b is now the only super-Earth exoplanet known to host both water and temperatures that could support life. Credit: ESA/Hubble, M. Kornmesser."\n` +
+            `       alt="A big blue planet on the right with its star and a moon visible on the left"\n` +
+            '/>'}
+        </CodeBlock>
+        <Image
+          alt="A big blue planet on the right with its star and a moon visible on the left"
+          caption="Artist's impression of K2-18b. K2-18b is now the only super-Earth exoplanet known to
+            host both water and temperatures that could support life. Credit: ESA/Hubble, M.
+            Kornmesser."
+          src={exoplanet}
+        />
       </article>
     </PageLayout>
   );
