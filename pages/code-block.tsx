@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
 import { CodeBlock } from '../components/code-block';
 import { PageLayout } from '../components/page-layout';
-import { PageSubtitle, PageTitle } from '../components/typography';
+import { Heading2, Heading5, PageSubtitle, PageTitle } from '../components/typography';
 
 const CodeBlockPage: NextPage = () => {
   const code =
@@ -14,11 +14,35 @@ const CodeBlockPage: NextPage = () => {
     <PageLayout>
       <article>
         <header>
-          <PageTitle>Code Block</PageTitle>
-          <PageSubtitle>Learn more about typography components in this template</PageSubtitle>
+          <PageTitle>Code block</PageTitle>
+          <PageSubtitle>Learn how the CodeBlock component works</PageSubtitle>
         </header>
-        <p>Code block is pretty neat. Let&apos;s have mor of it.</p>
-        <CodeBlock language="typescript">{code}</CodeBlock>
+        <p>
+          The <code>CodeBlock</code> component uses{' '}
+          <a href="https://github.com/react-syntax-highlighter/react-syntax-highlighter">
+            React Syntax Highlighter
+          </a>{' '}
+          with a default theme that was designed to match the style of this template.
+        </p>
+        <p>
+          You can customize it in the <code>globals.css</code> file by changing <code>hljs-</code>{' '}
+          css classes.
+        </p>
+        <p>
+          Alternatively, you can use the <code>style</code> property to specify one of the{' '}
+          <a href="https://highlightjs.org">highlight.js</a> styles.
+        </p>
+        <Heading2>Example</Heading2>
+        <Heading5>Example code:</Heading5>
+        <CodeBlock language="jsx">
+          {'<CodeBlock language="javascript">\n' +
+            `   {'const example = "Code block example";\\n' + 'console.log(example);'}\n` +
+            '</CodeBlock>'}
+        </CodeBlock>
+        <Heading5>How it&apos;s rendered:</Heading5>
+        <CodeBlock language="javascript">
+          {'const example = "Code block example";\n' + 'console.log(example);'}
+        </CodeBlock>
       </article>
     </PageLayout>
   );

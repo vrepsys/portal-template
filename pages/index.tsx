@@ -43,17 +43,6 @@ const Home: NextPage = () => {
           <li>Uranus</li>
           <li>Neptune</li>
         </ol>
-        <Heading2>Image</Heading2>
-        <figure>
-          <Image
-            width="668px"
-            height="445"
-            layout="responsive"
-            src="/planet.png"
-            alt="Image of a planet"
-          />
-          <figcaption>Image Credit: NASA, ESA, CSA, STScI</figcaption>
-        </figure>
         <Heading2>Divider</Heading2>
         This is a text above the divider.
         <hr />
