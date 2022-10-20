@@ -29,25 +29,23 @@ const Home: NextPage = () => {
           to build a neat documentation portal.
         </p>
         <p>
-          Deploy to Vercel or Netlify:
-          <div className="flex gap-4">
-            <a
-              className="block"
-              href={`https://vercel.com/new/clone?repository-url=${encodeURIComponent(
-                'https://github.com/vrepsys/portal-template'
-              )}`}
-            >
-              <img src="https://vercel.com/button" alt="Deploy with Vercel" />
-            </a>
-            <a
-              className="block"
-              href={`https://app.netlify.com/start/deploy?repository=${encodeURIComponent(
-                'https://github.com/vrepsys/portal-template'
-              )}`}
-            >
-              <img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />
-            </a>
-          </div>
+          Deploy to Vercel or Netlify (need to recreate those buttons instead of using images):
+          <a
+            className="block"
+            href={`https://vercel.com/new/clone?repository-url=${encodeURIComponent(
+              'https://github.com/vrepsys/portal-template'
+            )}`}
+          >
+            <img src="https://vercel.com/button" alt="Deploy with Vercel" />
+          </a>
+          <a
+            className="block"
+            href={`https://app.netlify.com/start/deploy?repository=${encodeURIComponent(
+              'https://github.com/vrepsys/portal-template'
+            )}`}
+          >
+            <img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />
+          </a>
         </p>
         <Heading2>Lists</Heading2>
         <Heading3>Ordered list</Heading3>
