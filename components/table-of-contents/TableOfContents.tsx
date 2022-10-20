@@ -63,7 +63,7 @@ export const TableOfContents: React.FC<{}> = () => {
     return <></>;
   }
   return (
-    <nav aria-label="Table of contents" className="pr-2 xl:p-0">
+    <nav aria-label="Table of contents">
       <div className="list-headline lg:small">On this page</div>
       <Headings headings={nestedHeadings} activeId={activeId} />
     </nav>
