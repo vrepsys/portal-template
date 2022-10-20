@@ -21,7 +21,7 @@ export const SideNavigation: React.FC<Props> = ({ selectedPath }) => {
   return (
     <nav aria-label="Side navigation">
       <div className="list-headline lg:small">Getting Started</div>
-      <ul className="pr-2">
+      <ul>
         {navItems.map((item, i) => (
           <li key={i} className="my-1">
             <Button

@@ -27,10 +27,12 @@ module.exports = {
       },
       maxWidth: {
         'main-content': 'var(--main-content-width)',
+        'tablet': '1040px',
+        'desktop': '1440px',
       },
       gridTemplateColumns: {
-        'page-tablet': '15rem var(--main-content-width)',
-        'page-desktop': '15rem var(--main-content-width) 15rem',
+        'page-tablet': '15rem 1fr',
+        'page-desktop': '15rem 1fr 15rem',
       },
       colors: {
         'color-default': 'var(--color-default)',
