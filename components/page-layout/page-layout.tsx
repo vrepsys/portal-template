@@ -91,7 +91,7 @@ export const PageLayout: React.FC<PropsWithChildren> = ({ children }) => {
             </>
           )}
         </Popover>
-        <div className="mx-auto px-5 lg:px-10 flex justify-center lg:grid lg:gap-14 lg:grid-cols-page-tablet xl:grid-cols-page-desktop">
+        <div className="mx-auto px-5 lg:px-10 flex justify-center lg:grid lg:gap-14 lg:grid-cols-page-tablet xl:grid-cols-page-desktop lg:max-w-[1040px] xl:max-w-[1340px]">
           <div className="hidden lg:block border-r border-r-color-divider sticky top-14 pt-8 overflow-y-scroll h-[calc(100vh_-_theme(spacing.14))]">
             <SideNavigation selectedPath={pathname} />
           </div>

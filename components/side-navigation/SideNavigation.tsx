@@ -4,13 +4,13 @@ const navItems = [
   { name: 'Home', href: '/' },
   { name: 'Typography', href: '/typography' },
   { name: 'Image', href: '/image' },
-  { name: 'Code Block', href: '/codeBlock' },
+  { name: 'Code Block', href: '/code-block' },
   { name: 'Callout', href: '/callout' },
   { name: 'List', href: '/list' },
   { name: 'Table', href: '/table' },
-  { name: 'Blockquote', href: '/blockQuote' },
+  { name: 'Blockquote', href: '/blockquote' },
   { name: 'Divider', href: '/divider' },
-  { name: 'Card list', href: '/cardList' },
+  { name: 'Card list', href: '/card-list' },
 ];
 
 interface Props {
