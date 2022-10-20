@@ -1,6 +1,6 @@
-import { useCallback, useState } from "react";
-import { HeadingData, useHeadingsData } from "./useHeadingsData";
-import { useIntersectionObserver } from "./useInteractionObserver";
+import { useCallback, useState } from 'react';
+import { HeadingData, useHeadingsData } from './useHeadingsData';
+import { useIntersectionObserver } from './useInteractionObserver';
 
 const Headings: React.FC<{
   headings: HeadingData[];
@@ -10,7 +10,7 @@ const Headings: React.FC<{
     (id: string) => (e: any) => {
       e.preventDefault();
       document?.querySelector(`#${id}`)?.scrollIntoView({
-        behavior: "smooth",
+        behavior: 'smooth',
       });
     },
     []
@@ -23,7 +23,7 @@ const Headings: React.FC<{
             <li className="my-1" key={heading.id}>
               <a
                 className={`button secondary block lg:small xl:inline-block ${
-                  heading.id === activeId ? "selected" : ""
+                  heading.id === activeId ? 'selected' : ''
                 }`}
                 href={`#${heading.id}`}
                 onClick={navigateToHeading(heading.id)}
@@ -36,7 +36,7 @@ const Headings: React.FC<{
                     <li className="my-1" key={childHeading.id}>
                       <a
                         className={`button secondary block lg:small xl:inline-block ${
-                          childHeading.id === activeId ? "selected" : ""
+                          childHeading.id === activeId ? 'selected' : ''
                         }`}
                         href={`#${childHeading.id}`}
                         onClick={navigateToHeading(childHeading.id)}
@@ -63,7 +63,7 @@ export const TableOfContents: React.FC<{}> = () => {
     return <></>;
   }
   return (
-    <nav aria-label="Table of contents">
+    <nav aria-label="Table of contents" className="pr-2 xl:p-0">
       <div className="list-headline lg:small">On this page</div>
       <Headings headings={nestedHeadings} activeId={activeId} />
     </nav>
