@@ -1,16 +1,16 @@
-@import 'material-symbols/outlined.css';
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Source+Code+Pro:ital,wght@0,400;0,500;0,700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* @import 'material-symbols/outlined.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Source+Code+Pro:ital,wght@0,400;0,500;0,700&display=swap'); */
 
 html,
 body {
   padding: 0;
   margin: 0;
   -webkit-font-smoothing: antialiased;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -20,7 +20,7 @@ a {
 
 * {
   box-sizing: border-box;
-  @apply transition-all;
+  /* @apply transition-all; */
 }
 
 @layer base {
@@ -38,31 +38,25 @@ a {
     --width-page-padding-mobile: 1.25rem; /*20px*/
 
     --max-width-page-mobile: calc(
-      var(--width-page-padding-mobile) +
-      var(--width-page-article-column) +
-      var(--width-page-padding-mobile)
+      var(--width-page-padding-mobile) + var(--width-page-article-column) +
+        var(--width-page-padding-mobile)
     );
 
     --max-width-page-tablet: calc(
-      var(--width-page-padding) + 
-      var(--width-page-side-navigation-column) +
-      var(--width-page-column-gap) +
-      var(--width-page-article-column) +
-      var(--width-page-padding)
+      var(--width-page-padding) + var(--width-page-side-navigation-column) +
+        var(--width-page-column-gap) + var(--width-page-article-column) + var(--width-page-padding)
     );
 
     --max-width-page-desktop: calc(
-      var(--width-page-padding) + 
-      var(--width-page-side-navigation-column) +
-      var(--width-page-column-gap) +
-      var(--width-page-article-column) +
-      var(--width-page-column-gap) +
-      var(--width-page-table-of-contents-column) +
-      var(--width-page-padding)
+      var(--width-page-padding) + var(--width-page-side-navigation-column) +
+        var(--width-page-column-gap) + var(--width-page-article-column) +
+        var(--width-page-column-gap) + var(--width-page-table-of-contents-column) +
+        var(--width-page-padding)
     );
 
     --column-template-page-tablet: var(--width-page-side-navigation-column) 1fr;
-    --column-template-page-desktop: var(--width-page-side-navigation-column) 1fr var(--width-page-table-of-contents-column);    
+    --column-template-page-desktop: var(--width-page-side-navigation-column) 1fr
+      var(--width-page-table-of-contents-column);
   }
 }
 
@@ -239,5 +233,9 @@ a {
   }
   .list-headline.small {
     @apply text-small font-bold pt-4 pb-2 px-2;
+  }
+
+  .code-block .hljs-string {
+    color: green;
   }
 }

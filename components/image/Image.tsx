@@ -7,7 +7,9 @@ interface Props extends ImageProps {
 export const PortalImage: React.FC<Props> = ({ caption, ...props }) => {
   return (
     <figure className="my-3">
-      <Image className='rounded-lg border border-color-divider' alt={props.alt} {...props} />
+      <div className="flex border border-color-divider rounded-lg overflow-hidden">
+        <Image alt={props.alt} {...props} />
+      </div>
       {caption && (
         <figcaption className="text-center text-small italic text-color-secondary">
           {caption}

@@ -8,7 +8,7 @@ interface Props extends PropsWithChildren {
 
 export const CodeBlock: React.FC<Props> = ({ language, children }) => {
   return (
-    <SyntaxHighlighter language={language} style={theme}>
+    <SyntaxHighlighter className="code-block" language={language} useInlineStyles={false}>
       {children as string}
     </SyntaxHighlighter>
   );
