@@ -59,6 +59,9 @@ export const TableOfContents: React.FC<{}> = () => {
   const { nestedHeadings } = useHeadingsData();
   const [activeId, setActiveId] = useState<string>();
   useIntersectionObserver(setActiveId);
+  if (!nestedHeadings.length) {
+    return <></>;
+  }
   return (
     <nav aria-label="Table of contents" className="pr-2 xl:p-0">
       <div className="list-headline lg:small">On this page</div>

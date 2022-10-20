@@ -19,7 +19,7 @@ export const TopNav = () => {
               'bg-white sticky top-0 lg:border-b lg:border-color-divider lg:overflow-y-visible h-14 z-50'
             )}
           >
-            <div className="mx-auto px-3 py-2 border-b border-color-divider lg:border-none lg:px-10 w-full lg:max-w-[1120px] xl:max-w-[1420px] h-14">
+            <div className="mx-auto px-3 py-2 border-b border-color-divider lg:border-none lg:px-[var(--width-page-padding)] w-full lg:max-w-tablet xl:max-w-desktop h-14">
               <div className="flex gap-2 items-center">
                 <div className="flex grow gap-2 items-center">
                   <a className="button" href="#">

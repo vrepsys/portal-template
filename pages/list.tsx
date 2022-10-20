@@ -34,7 +34,7 @@ const ListsPage: NextPage = () => {
           <li><p>Sweet raspberries</p></li>
         </ul>
         <p>Lists is here.</p>
-        <ol start="98">
+        <ol>
           <li><p>Large apples</p></li>
           <li><p>Fresh oranges in a basket full of other tasty fruits that would be amazing for Sunday breakfast. Yummy</p></li>
           <li>
