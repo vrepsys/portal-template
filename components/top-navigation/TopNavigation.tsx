@@ -1,5 +1,4 @@
 import { Popover } from '@headlessui/react';
-import { useRouter } from 'next/router';
 import { Fragment } from 'react';
 import { SideNavigation } from '../side-navigation';
 import { TableOfContents } from '../table-of-contents';

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { PropsWithChildren } from 'react';
 
 interface ButtonProps extends PropsWithChildren {
@@ -19,16 +20,17 @@ export const Button: React.FC<ButtonProps> = ({
   style = 'default',
 }) => {
   return (
-    <a
-      className={classNames(
-        selected ? 'selected' : '',
-        style !== 'default' ? style : '',
-        'block button',
-        className
-      )}
-      href={to}
-    >
-      {children}
-    </a>
+    <Link href={to} passHref>
+      <a
+        className={classNames(
+          selected ? 'selected' : '',
+          style !== 'default' ? style : '',
+          'block button',
+          className
+        )}
+      >
+        {children}
+      </a>
+    </Link>
   );
 };
