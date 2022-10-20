@@ -26,13 +26,14 @@ module.exports = {
         12.5: '3.25rem',
       },
       maxWidth: {
-        'main-content': 'var(--main-content-width)',
-        'tablet': '1040px',
-        'desktop': '1440px',
+        'article-column': 'var(--width-page-article-column)',
+        'mobile': 'var(--max-width-page-mobile)',
+        'tablet': 'var(--max-width-page-tablet)',
+        'desktop': 'var(--max-width-page-desktop)',
       },
       gridTemplateColumns: {
-        'page-tablet': '15rem 1fr',
-        'page-desktop': '15rem 1fr 15rem',
+        'page-tablet': 'var(--column-template-page-tablet)',
+        'page-desktop': 'var(--column-template-page-desktop)',
       },
       colors: {
         'color-default': 'var(--color-default)',

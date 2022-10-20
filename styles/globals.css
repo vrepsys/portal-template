@@ -29,7 +29,40 @@ a {
     --color-secondary: theme('colors.slate[600]');
     --color-tertiary: theme('colors.slate[400]');
     --color-divider: theme('colors.slate[200]');
-    --main-content-width: 740px;
+
+    --width-page-article-column: 46.25rem; /*740px*/
+    --width-page-side-navigation-column: 15rem; /*240px*/
+    --width-page-table-of-contents-column: 15rem; /*240px*/
+    --width-page-column-gap: 3.5rem; /*56px*/
+    --width-page-padding: 2.5rem; /*40px*/
+    --width-page-padding-mobile: 1.25rem; /*20px*/
+
+    --max-width-page-mobile: calc(
+      var(--width-page-padding-mobile) +
+      var(--width-page-article-column) +
+      var(--width-page-padding-mobile)
+    );
+
+    --max-width-page-tablet: calc(
+      var(--width-page-padding) + 
+      var(--width-page-side-navigation-column) +
+      var(--width-page-column-gap) +
+      var(--width-page-article-column) +
+      var(--width-page-padding)
+    );
+
+    --max-width-page-desktop: calc(
+      var(--width-page-padding) + 
+      var(--width-page-side-navigation-column) +
+      var(--width-page-column-gap) +
+      var(--width-page-article-column) +
+      var(--width-page-column-gap) +
+      var(--width-page-table-of-contents-column) +
+      var(--width-page-padding)
+    );
+
+    --column-template-page-tablet: var(--width-page-side-navigation-column) 1fr;
+    --column-template-page-desktop: var(--width-page-side-navigation-column) 1fr var(--width-page-table-of-contents-column);    
   }
 }
 
