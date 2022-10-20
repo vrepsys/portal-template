@@ -141,7 +141,7 @@ a {
     @apply bg-color-divider my-3;
   }
 
-  article code {
+  article p code {
     @apply font-mono bg-slate-100 border border-color-divider rounded px-1 font-medium;
   }
   article a {
