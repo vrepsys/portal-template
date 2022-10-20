@@ -21,7 +21,7 @@ export const SideNavigation: React.FC = () => {
       <div className="list-headline lg:small">Getting Started</div>
       <ul>
         {navItems.map((item, i) => (
-          <li key={i} className="my-1">
+          <li key={i} className="my-0.5">
             <Button
               key={item.name}
               to={item.href}

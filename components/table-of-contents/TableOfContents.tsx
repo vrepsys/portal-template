@@ -20,7 +20,7 @@ const Headings: React.FC<{
       {headings?.map((heading) => {
         return (
           <>
-            <li className="my-1" key={heading.id}>
+            <li className="my-0.5" key={heading.id}>
               <a
                 className={`button secondary block lg:small xl:inline-block ${
                   heading.id === activeId ? 'selected' : ''
@@ -33,7 +33,7 @@ const Headings: React.FC<{
               {heading.items && (
                 <ul className="ml-4">
                   {heading.items.map((childHeading) => (
-                    <li className="my-1" key={childHeading.id}>
+                    <li className="my-0.5" key={childHeading.id}>
                       <a
                         className={`button secondary block lg:small xl:inline-block ${
                           childHeading.id === activeId ? 'selected' : ''
