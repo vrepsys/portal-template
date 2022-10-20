@@ -17,7 +17,7 @@ const navItems = [
 export const SideNavigation: React.FC = () => {
   const { pathname } = useRouter();
   return (
-    <nav aria-label="Side navigation" className="pr-2">
+    <nav aria-label="Side navigation">
       <div className="list-headline lg:small">Getting Started</div>
       <ul>
         {navItems.map((item, i) => (
