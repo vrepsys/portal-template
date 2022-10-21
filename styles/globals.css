@@ -20,7 +20,7 @@ a {
 
 * {
   box-sizing: border-box;
-  /* @apply transition-all; */
+  @apply transition-all duration-150;
 }
 
 @layer base {
@@ -189,7 +189,7 @@ a {
   }
 
   .button {
-    @apply font-sans font-medium text-base text-color-default inline-block rounded px-2 py-1;
+    @apply font-sans font-medium text-base text-color-default inline-block rounded-lg px-2 py-1 flex items-center gap-2;
   }
   .button:hover {
     @apply text-indigo-700 bg-indigo-50;
@@ -197,11 +197,23 @@ a {
   .button:active {
     @apply text-indigo-900 bg-indigo-100;
   }
+  .button svg {
+    @apply inline-block;
+  }
   .button.small {
     @apply text-small font-medium;
   }
   .button.secondary {
     @apply text-color-secondary;
+  }
+  .button.primary {
+    @apply bg-slate-900 text-white px-3 gap-3;
+  }
+  .button.primary:hover {
+    @apply bg-indigo-800;
+  }
+  .button.primary:active {
+    @apply bg-indigo-900;
   }
   .button.secondary:hover {
     @apply text-indigo-700;
@@ -226,6 +238,12 @@ a {
   }
   .button.search:hover::after {
     @apply text-indigo-400 bg-indigo-100;
+  }
+  .button.netlify svg {
+    @apply text-[#00C7B7];
+  }
+  .button.vercel svg {
+    @apply text-[#0070F3];    
   }
 
   .list-headline {
