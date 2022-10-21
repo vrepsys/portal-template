@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 export interface HeadingData {
   id: string;
@@ -11,10 +11,13 @@ const getNestedHeadings = (headingElements: Element[]) => {
 
   headingElements.forEach((heading: any, index: number) => {
     const { innerText: title, id } = heading;
+    if (!id) {
+      return;
+    }
 
-    if (heading.nodeName === "H2") {
+    if (heading.nodeName === 'H2') {
       nestedHeadings.push({ id, title, items: [] });
-    } else if (heading.nodeName === "H3" && nestedHeadings.length > 0) {
+    } else if (heading.nodeName === 'H3' && nestedHeadings.length > 0) {
       nestedHeadings[nestedHeadings.length - 1].items.push({
         id,
         title,
@@ -30,7 +33,7 @@ export const useHeadingsData = () => {
   const [nestedHeadings, setNestedHeadings] = useState<HeadingData[]>([]);
 
   useEffect(() => {
-    const headingElements = Array.from(document.querySelectorAll("h2, h3"));
+    const headingElements = Array.from(document.querySelectorAll('h2, h3'));
 
     const newNestedHeadings = getNestedHeadings(headingElements);
     setNestedHeadings(newNestedHeadings);

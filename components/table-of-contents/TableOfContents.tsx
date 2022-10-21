@@ -19,36 +19,34 @@ const Headings: React.FC<{
     <ul>
       {headings?.map((heading) => {
         return (
-          <>
-            <li className="my-0.5" key={heading.id}>
-              <a
-                className={`button secondary block lg:small xl:inline-block ${
-                  heading.id === activeId ? 'selected' : ''
-                }`}
-                href={`#${heading.id}`}
-                onClick={navigateToHeading(heading.id)}
-              >
-                {heading.title}
-              </a>
-              {heading.items && (
-                <ul className="ml-4">
-                  {heading.items.map((childHeading) => (
-                    <li className="my-0.5" key={childHeading.id}>
-                      <a
-                        className={`button secondary block lg:small xl:inline-block ${
-                          childHeading.id === activeId ? 'selected' : ''
-                        }`}
-                        href={`#${childHeading.id}`}
-                        onClick={navigateToHeading(childHeading.id)}
-                      >
-                        {childHeading.title}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
-          </>
+          <li className="my-0.5" key={heading.id}>
+            <a
+              className={`button secondary block lg:small xl:inline-block ${
+                heading.id === activeId ? 'selected' : ''
+              }`}
+              href={`#${heading.id}`}
+              onClick={navigateToHeading(heading.id)}
+            >
+              {heading.title}
+            </a>
+            {heading.items && (
+              <ul className="ml-4">
+                {heading.items.map((childHeading) => (
+                  <li className="my-0.5" key={`${heading.id}-${childHeading.id}`}>
+                    <a
+                      className={`button secondary block lg:small xl:inline-block ${
+                        childHeading.id === activeId ? 'selected' : ''
+                      }`}
+                      href={`#${childHeading.id}`}
+                      onClick={navigateToHeading(childHeading.id)}
+                    >
+                      {childHeading.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
         );
       })}
     </ul>
