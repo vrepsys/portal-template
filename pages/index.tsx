@@ -29,12 +29,16 @@ const Home: NextPage = () => {
           each components in the template. We’ve also added some tips and tricks about what it takes
           to build a neat documentation portal.
         </p>
+        <Heading2>Get started</Heading2>
         <p>Deploy to Vercel or Netlify (need to recreate those buttons instead of using images):</p>
         <div className="flex gap-2">
           <DeployButton platform="netlify" />
           <DeployButton platform="vercel" />
         </div>
+        <Heading2>Components</Heading2>
         <CardsExample />
+        <Heading2>Get in touch</Heading2>
+        <p>Hey, we&apos;re friendly!</p>
       </article>
     </PageLayout>
   );
