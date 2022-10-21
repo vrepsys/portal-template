@@ -131,6 +131,13 @@ a {
   article ol li {
   }
 
+  article ul.card-list {
+    @apply list-none
+  }
+  article ul.card-list li {
+    @apply ml-0;
+  }
+
   article hr {
     @apply bg-color-divider my-3;
   }
@@ -274,7 +281,7 @@ a {
     @apply text-red-300;
   }
   .code-block class-name {
-    @apply text-slate-50 underline;
+    @apply text-slate-50 underline underline-offset-2;
   }
   .code-block .hljs-boolean {
     @apply text-teal-200;
