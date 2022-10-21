@@ -1,11 +1,11 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
 import { Popover } from '@headlessui/react';
 import { Heading2 } from '../components/typography/heading2';
 import { Heading3, Heading4, Heading5, PageSubtitle, PageTitle } from '../components/typography';
 import { SideNavigation } from '../components/side-navigation/SideNavigation';
 import { PageLayout } from '../components/page-layout';
+import { DeployButton } from '../components/deploy-button/DeployButton';
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
@@ -28,25 +28,11 @@ const Home: NextPage = () => {
           each components in the template. We’ve also added some tips and tricks about what it takes
           to build a neat documentation portal.
         </p>
-        <p>
-          Deploy to Vercel or Netlify (need to recreate those buttons instead of using images):
-          <a
-            className="block"
-            href={`https://vercel.com/new/clone?repository-url=${encodeURIComponent(
-              'https://github.com/vrepsys/portal-template'
-            )}`}
-          >
-            <img src="https://vercel.com/button" alt="Deploy with Vercel" />
-          </a>
-          <a
-            className="block"
-            href={`https://app.netlify.com/start/deploy?repository=${encodeURIComponent(
-              'https://github.com/vrepsys/portal-template'
-            )}`}
-          >
-            <img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />
-          </a>
-        </p>
+        <p>Deploy to Vercel or Netlify (need to recreate those buttons instead of using images):</p>
+        <div className="flex gap-2">
+          <DeployButton platform="netlify" />
+          <DeployButton platform="vercel" />
+        </div>
         <Heading2>Lists</Heading2>
         <Heading3>Ordered list</Heading3>
         Planets:
