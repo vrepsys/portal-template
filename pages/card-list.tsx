@@ -1,44 +1,76 @@
 import { NextPage } from 'next';
-import Image from 'next/image';
+import { Card, CardList } from '../components/cards';
 import { PageLayout } from '../components/page-layout';
 import { Heading2, PageSubtitle, PageTitle } from '../components/typography';
 import TypographyImage from '/public/cards/typography.png';
 
-const Card: React.FC = () => {
-  return (
-    <li className="-mx-2">
-      <a
-        href="#"
-        className="flex flex-col p-2 pb-3 bg-white rounded-xl duration-300 border border-white hover:bg-slate-50 hover:border-slate-100"
-      >
-        <div className="overflow-hidden">
-          <Image layout="responsive" src={TypographyImage} alt="" aria-hidden={true} />
-        </div>
-        <div className="text-small font-bold text-color-default mt-2">Typography</div>
-        <div className="text-small text-color-secondary mt-1">
-          Learn about page title, subtitle, headings, and other typography components
-        </div>
-      </a>
-    </li>
-  );
-};
+const CARDS = [
+  {
+    title: 'Typography',
+    subtitle: 'Learn about page title, subtitle, headings, and other typography components',
+    image: TypographyImage,
+    url: '/typography',
+  },
+  {
+    title: 'Divider',
+    subtitle: 'Learn about page title, subtitle, headings, and other typography components',
+    image: TypographyImage,
+    url: '/divider',
+  },
+  {
+    title: 'Blockquote',
+    subtitle: 'Learn about page title, subtitle, headings, and other typography components',
+    image: TypographyImage,
+    url: '/blockquote',
+  },
+  {
+    title: 'Code block',
+    subtitle: 'Learn about page title, subtitle, headings, and other typography components',
+    image: TypographyImage,
+    url: '/code-block',
+  },
+  {
+    title: 'Image',
+    subtitle: 'Learn about page title, subtitle, headings, and other typography components',
+    image: TypographyImage,
+    url: '/image',
+  },
+  {
+    title: 'Table',
+    subtitle: 'Learn about page title, subtitle, headings, and other typography components',
+    image: TypographyImage,
+    url: '/table',
+  },
+  {
+    title: 'Card list',
+    subtitle: 'Learn about page title, subtitle, headings, and other typography components',
+    image: TypographyImage,
+    url: '/card-list',
+  },
+];
 
 const CardsPage: NextPage = () => {
   return (
     <PageLayout>
       <article>
         <header>
-          <PageTitle>Card List</PageTitle>
-          <PageSubtitle>Learn more about table components in this template</PageSubtitle>
+          <PageTitle>Card list</PageTitle>
+          <PageSubtitle>Learn about the CardList and Card components</PageSubtitle>
         </header>
         <Heading2>Example</Heading2>
-        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 list-none">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-        </ul>
+        <CardList>
+          {CARDS.map(({ title, subtitle, image, url }) => {
+            return (
+              <Card
+                key={`${title}-${url}`}
+                title={title}
+                subtitle={subtitle}
+                image={image}
+                url={url}
+              />
+            );
+          })}
+        </CardList>
       </article>
     </PageLayout>
   );
