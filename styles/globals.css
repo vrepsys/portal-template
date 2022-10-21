@@ -142,7 +142,7 @@ a {
     @apply text-indigo-700 border-b border-color-divider;
   }
   article a:hover {
-    @apply text-indigo-800 border-indigo-300;
+    @apply text-indigo-800 border-indigo-300 border-b-2;
   }
   article a:active {
     @apply text-indigo-900 border-indigo-400;

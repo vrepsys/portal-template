@@ -1,5 +1,12 @@
 import { Card, CardList } from '../cards';
 import TypographyImage from '/public/cards/typography.png';
+import ListImage from '/public/cards/list.png';
+import ImageImage from '/public/cards/image.png';
+import DividerImage from '/public/cards/divider.png';
+import BlockquoteImage from '/public/cards/blockquote.png';
+import CodeBlockImage from '/public/cards/code-block.png';
+import TableImage from '/public/cards/table.png';
+import CardImage from '/public/cards/card-group.png';
 
 const CARDS = [
   {
@@ -9,39 +16,45 @@ const CARDS = [
     url: '/typography',
   },
   {
+    title: 'List',
+    subtitle: 'Learn about page title, subtitle, headings, and other typography components',
+    image: ListImage,
+    url: '/list',
+  },
+  {
+    title: 'Image',
+    subtitle: 'Learn about page title, subtitle, headings, and other typography components',
+    image: ImageImage,
+    url: '/image',
+  },
+  {
     title: 'Divider',
     subtitle: 'Learn about page title, subtitle, headings, and other typography components',
-    image: TypographyImage,
+    image: DividerImage,
     url: '/divider',
   },
   {
     title: 'Blockquote',
     subtitle: 'Learn about page title, subtitle, headings, and other typography components',
-    image: TypographyImage,
+    image: BlockquoteImage,
     url: '/blockquote',
   },
   {
     title: 'Code block',
     subtitle: 'Learn about page title, subtitle, headings, and other typography components',
-    image: TypographyImage,
+    image: CodeBlockImage,
     url: '/code-block',
-  },
-  {
-    title: 'Image',
-    subtitle: 'Learn about page title, subtitle, headings, and other typography components',
-    image: TypographyImage,
-    url: '/image',
   },
   {
     title: 'Table',
     subtitle: 'Learn about page title, subtitle, headings, and other typography components',
-    image: TypographyImage,
+    image: TableImage,
     url: '/table',
   },
   {
     title: 'Card list',
     subtitle: 'Learn about page title, subtitle, headings, and other typography components',
-    image: TypographyImage,
+    image: CardImage,
     url: '/card-list',
   },
 ];

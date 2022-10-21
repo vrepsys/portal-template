@@ -40,13 +40,13 @@ const Home: NextPage = () => {
           </PageSubtitle>
         </header>
         <p>
-          It’s build with Next.js and styled with tailwindcss. Every component is customizable using
+          It’s build with <a href='https://nextjs.org/'>Next.js</a> and styled with <a href='https://tailwindcss.com/'>tailwindcss</a>. Every component is customizable using
           css variables. You’re welcome to visit other pages in this template to learn more about
-          each components in the template. We’ve also added some tips and tricks about what it takes
+          each component in the template. We’ve also added some tips and tricks about what it takes
           to build a neat documentation portal.
         </p>
         <Heading2>Get started</Heading2>
-        <p>Deploy to Vercel or Netlify (need to recreate those buttons instead of using images):</p>
+        <p>Deploy to Vercel or Netlify:</p>
         <div className="flex gap-2">
           <a className="button primary netlify" href="#">
             <IconNetlify/>Deploy to Netlify
@@ -56,9 +56,11 @@ const Home: NextPage = () => {
           </a>
         </div>
         <Heading2>Components</Heading2>
+        <p>Here's a full list of available components:</p>
         <CardsExample />
         <Heading2>Get in touch</Heading2>
-        <p>Hey, we&apos;re friendly!</p>
+        <p>Hey, we&apos;re friendly! We would be happy to learn what you managed to build using this template, hear your feedback, ideas or any other thoughs.</p>
+        <p> Reach out by writing to <a href='mailto:email@email.com'>email@email.com</a></p>
       </article>
     </PageLayout>
   );
