@@ -235,7 +235,123 @@ a {
     @apply text-small font-bold pt-4 pb-2 px-2;
   }
 
-  .code-block .hljs-string {
-    color: green;
+  .code-block {
+    @apply  bg-slate-900
+            text-slate-200
+            font-mono
+            text-code
+            my-3
+            px-5 py-4
+            w-full
+            overflow-scroll
+            border border-slate-900 rounded-lg;
   }
+  .code-block .hljs-comment {
+    @apply text-slate-400;
+  }
+  .code-block .hljs-prolog {
+    @apply text-slate-400;
+  }
+  .code-block .hljs-doctype {
+    @apply text-slate-400;
+  }
+  .code-block .hljs-cdata {
+    @apply text-slate-400;
+  }
+  .code-block .hljs-punctuation {
+    @apply text-slate-300;
+  }
+  .code-block .namespace {
+    opacity: 0.7;
+  }
+  .code-block .hljs-property {
+    @apply text-red-300;
+  }
+  .code-block .hljs-keyword {
+    @apply text-red-300;
+  }
+  .code-block .hljs-tag {
+    @apply text-red-300;
+  }
+  .code-block class-name {
+    @apply text-slate-50 underline;
+  }
+  .code-block .hljs-boolean {
+    @apply text-teal-200;
+  }
+  .code-block .hljs-constant {
+    @apply text-teal-200;
+  }
+  .code-block .hljs-symbol {
+    @apply text-red-500;
+  }
+  .code-block .hljs-deleted {
+    @apply text-red-500;
+  }
+  .code-block .hljs-number {
+    @apply text-pink-500;
+  }
+  .code-block .hljs-selector {
+    @apply text-indigo-500;
+  }
+  .code-block attr-name {
+    @apply text-indigo-300;
+  }
+  .code-block .hljs-string {
+    @apply text-indigo-300;
+  }
+  .code-block .hljs-char {
+    @apply text-indigo-300;
+  }
+  .code-block .hljs-built_in {
+    @apply text-indigo-300;
+  }
+  .code-block .hljs-inserted {
+    @apply text-indigo-300;
+  }
+  .code-block .hljs-variable {
+    @apply text-indigo-200;
+  }
+  .code-block .hljs-operator {
+    @apply text-slate-50;
+  }
+  .code-block .hljs-entity {
+    @apply text-orange-100;
+    cursor: help;
+  }
+  .code-block .hljs-url {
+    @apply text-indigo-200;
+  }
+  .code-block .language-css .token.string {
+    @apply text-teal-200;
+  }
+  .code-block .style .token.string {
+    @apply text-teal-200;
+  }
+  .code-block .hljs-atrule {
+    @apply text-orange-200;
+  }
+  .code-block attr-value {
+    @apply text-orange-200;
+  }
+  .code-block .hljs-attr {
+    @apply text-orange-200;
+  }
+  .code-block .hljs-function {
+    @apply text-orange-200;
+  }
+  .code-block .hljs-regex {
+    @apply text-orange-300;
+  }
+  .code-block .hljs-important {
+    @apply text-orange-400;
+    font-weight: bold;
+  }
+  .code-block .hljs-bold {
+    font-weight: bold;
+  }
+  .code-block .hljs-italic {
+    font-style: italic;
+  }
+
 }

@@ -106,6 +106,14 @@ module.exports = {
             fontWeight: '400',
           },
         ],
+        code: [
+          '0.875rem',
+          {
+            lineHeight: '1.5rem',
+            letterSpacing: '0.0125rem',
+            fontWeight: '400',
+          },
+        ],
         'title-mobile': [
           '2rem',
           {
