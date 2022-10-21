@@ -228,18 +228,6 @@ a {
     @apply text-indigo-400 bg-indigo-100;
   }
 
-  article ul.card-list {
-    @apply list-none
-  }
-  article ul.card-list li {
-  }
-  article ul.card-list li a {
-    @apply border-0 bg-white rounded-xl duration-300 border border-white;
-  }
-  article ul.card-list li a:hover {
-    @apply bg-slate-50 border-color-divider;
-  }
-
   .list-headline {
     @apply text-base font-bold pt-4 pb-2 px-2;
   }
