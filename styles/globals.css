@@ -131,13 +131,6 @@ a {
   article ol li {
   }
 
-  article ul.card-list {
-    @apply list-none
-  }
-  article ul.card-list li {
-    @apply ml-0;
-  }
-
   article hr {
     @apply bg-color-divider my-3;
   }
@@ -233,6 +226,18 @@ a {
   }
   .button.search:hover::after {
     @apply text-indigo-400 bg-indigo-100;
+  }
+
+  article ul.card-list {
+    @apply list-none
+  }
+  article ul.card-list li {
+  }
+  article ul.card-list li a {
+    @apply border-0 bg-white rounded-xl duration-300 border border-white;
+  }
+  article ul.card-list li a:hover {
+    @apply bg-slate-50 border-color-divider;
   }
 
   .list-headline {
