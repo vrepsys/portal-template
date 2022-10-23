@@ -61,10 +61,10 @@ const Home: NextPage = () => {
           </a>
         </div>
         <Heading2>Components</Heading2>
-        <p>Here's a full list of available components:</p>
+        <p>Here&apos;s a full list of available components:</p>
         <CardsExample />
         <Heading2>Roadmap</Heading2>
-        <p>We're working on a Markdoc implementation.</p>
+        <p>We&apos;re working on a Markdoc implementation.</p>
         <Heading2>Get in touch</Heading2>
         <p>
           Hey, we&apos;re friendly! We would be happy to learn what you managed to build using this
