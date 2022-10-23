@@ -9,6 +9,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-22.04
+    env:
+      NEXT_PUBLIC_BASE_PATH: /portal-template
     permissions:
       contents: write
     concurrency:
