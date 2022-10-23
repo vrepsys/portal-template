@@ -10,7 +10,7 @@ const Customization: NextPage = () => {
           <PageTitle>Search</PageTitle>
           <PageSubtitle>How you can implement search</PageSubtitle>
         </header>
-        <p>This is how you do it.</p>
+        <p>This is how you do it. Fuse.js or Algolia.</p>
       </article>
     </PageLayout>
   );
