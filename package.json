@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npx next build && npx next export",
+    "build": "npx next build",
+    "export": "npx next export",
     "lint": "next lint"
   },
   "dependencies": {
