@@ -5,16 +5,8 @@ import { useIntersectionObserver } from './useInteractionObserver';
 const Headings: React.FC<{
   headings: HeadingData[];
   activeId: string | undefined;
-}> = ({ headings, activeId }) => {
-  const navigateToHeading = useCallback(
-    (id: string) => (e: any) => {
-      e.preventDefault();
-      document?.querySelector(`#${id}`)?.scrollIntoView({
-        behavior: 'smooth',
-      });
-    },
-    []
-  );
+  navigate: (headingId: string) => (e: any) => void;
+}> = ({ headings, activeId, navigate }) => {
   return (
     <ul>
       {headings?.map((heading) => {
@@ -25,7 +17,7 @@ const Headings: React.FC<{
                 heading.id === activeId ? 'selected' : ''
               }`}
               href={`#${heading.id}`}
-              onClick={navigateToHeading(heading.id)}
+              onClick={navigate(heading.id)}
             >
               {heading.title}
             </a>
@@ -38,7 +30,7 @@ const Headings: React.FC<{
                         childHeading.id === activeId ? 'selected' : ''
                       }`}
                       href={`#${childHeading.id}`}
-                      onClick={navigateToHeading(childHeading.id)}
+                      onClick={navigate(childHeading.id)}
                     >
                       {childHeading.title}
                     </a>
@@ -53,17 +45,31 @@ const Headings: React.FC<{
   );
 };
 
-export const TableOfContents: React.FC<{}> = () => {
+export interface Props {
+  onNavigate?: () => void;
+}
+
+export const TableOfContents: React.FC<Props> = ({ onNavigate }) => {
   const { nestedHeadings } = useHeadingsData();
   const [activeId, setActiveId] = useState<string>();
   useIntersectionObserver(setActiveId);
+  const navigateToHeading = useCallback(
+    (id: string) => (e: any) => {
+      e.preventDefault();
+      onNavigate && onNavigate();
+      document?.querySelector(`#${id}`)?.scrollIntoView({
+        behavior: 'smooth',
+      });
+    },
+    [onNavigate]
+  );
   if (!nestedHeadings.length) {
     return <></>;
   }
   return (
     <nav aria-label="Table of contents">
       <div className="list-headline lg:small">On this page</div>
-      <Headings headings={nestedHeadings} activeId={activeId} />
+      <Headings headings={nestedHeadings} activeId={activeId} navigate={navigateToHeading} />
     </nav>
   );
 };

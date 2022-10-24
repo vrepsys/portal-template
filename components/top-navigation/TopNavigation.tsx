@@ -22,7 +22,7 @@ const IconGithub: React.FC = () => {
 export const TopNav = () => {
   return (
     <Popover as={Fragment}>
-      {({ open }) => (
+      {({ open, close }) => (
         <>
           <header
             className={classNames(
@@ -76,7 +76,7 @@ export const TopNav = () => {
             </div>
             <hr className="mx-2 bg-color-divider" />
             <div className="pt-3 pb-5">
-              <TableOfContents />
+              <TableOfContents onNavigate={() => close()} />
             </div>
             <hr className="mx-2 bg-color-divider" />
             <div className="pt-3 pb-5">
