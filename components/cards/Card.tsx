@@ -10,7 +10,7 @@ interface Props {
 
 export const Card: React.FC<Props> = ({ title, subtitle, image, url }) => {
   return (
-    <li className="-mx-2">
+    <li className='m-0'>
       <Link href={url} passHref>
         <a className="flex flex-col p-2 pb-3 bg-white rounded-xl duration-300 border border-white hover:bg-slate-50 hover:border-slate-100">
           <div className="overflow-hidden">

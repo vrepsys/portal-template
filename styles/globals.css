@@ -54,9 +54,9 @@ a {
         var(--width-page-padding)
     );
 
-    --column-template-page-tablet: var(--width-page-side-navigation-column) 1fr;
-    --column-template-page-desktop: var(--width-page-side-navigation-column) 1fr
-      var(--width-page-table-of-contents-column);
+    --column-template-page-tablet: calc(var(--width-page-side-navigation-column) + var(--width-page-padding)) 1fr;
+    --column-template-page-desktop: calc(var(--width-page-side-navigation-column) + var(--width-page-padding)) 1fr
+      calc(var(--width-page-table-of-contents-column) + var(--width-page-padding));
   }
 }
 
@@ -189,10 +189,10 @@ a {
   }
 
   .button {
-    @apply font-sans font-medium text-base text-color-default inline-block rounded-lg px-2 py-1 flex items-center gap-2;
+    @apply font-sans font-medium text-base text-color-default inline-block rounded-lg border-0 px-2 py-1 flex items-center gap-2;
   }
   .button:hover {
-    @apply text-indigo-700 bg-indigo-50;
+    @apply text-indigo-700 bg-indigo-50 border-0;
   }
   .button:active {
     @apply text-indigo-900 bg-indigo-100;
