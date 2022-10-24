@@ -54,9 +54,14 @@ a {
         var(--width-page-padding)
     );
 
-    --column-template-page-tablet: calc(var(--width-page-side-navigation-column) + var(--width-page-padding)) 1fr;
-    --column-template-page-desktop: calc(var(--width-page-side-navigation-column) + var(--width-page-padding)) 1fr
-      calc(var(--width-page-table-of-contents-column) + var(--width-page-padding));
+    --column-template-page-tablet: calc(
+        var(--width-page-side-navigation-column) + var(--width-page-padding)
+      )
+      1fr;
+    --column-template-page-desktop: calc(
+        var(--width-page-side-navigation-column) + var(--width-page-padding)
+      )
+      1fr calc(var(--width-page-table-of-contents-column) + var(--width-page-padding));
   }
 }
 
@@ -189,7 +194,7 @@ a {
   }
 
   .button {
-    @apply font-sans font-medium text-base text-color-default inline-block rounded-lg border-0 px-2 py-1 flex items-center gap-2;
+    @apply font-sans font-medium text-base text-color-default rounded-lg border-0 px-2 py-1 flex items-center gap-2;
   }
   .button:hover {
     @apply text-indigo-700 bg-indigo-50 border-0;
@@ -243,7 +248,7 @@ a {
     @apply text-[#00C7B7];
   }
   .button.vercel svg {
-    @apply text-[#0070F3];    
+    @apply text-[#0070F3];
   }
 
   .list-headline {
@@ -254,7 +259,7 @@ a {
   }
 
   .code-block {
-    @apply  bg-slate-900
+    @apply bg-slate-900
             text-slate-200
             font-mono
             text-code
@@ -371,5 +376,4 @@ a {
   .code-block .hljs-italic {
     font-style: italic;
   }
-
 }

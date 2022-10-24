@@ -34,7 +34,7 @@ const IconVercel: React.FC = () => {
 const Home: NextPage = () => {
   return (
     <PageLayout>
-      <article>
+      <article className="content">
         <header>
           <PageTitle>Portal template</PageTitle>
           <PageSubtitle>A free and open source documentation website template</PageSubtitle>
@@ -60,7 +60,7 @@ const Home: NextPage = () => {
           Netlify.
         </p>
         <div className="flex gap-2">
-          <a className="button primary netlify" href="#">
+          <a className="button netlify" href="#">
             <IconNetlify />
             Deploy to Netlify
           </a>
@@ -89,7 +89,7 @@ const Home: NextPage = () => {
         <p>
           Feel free to drop us a line with your feedback, ideas or if you need help with your
           documentation. This project was created by <Link url="https://repsys.cc">@vrepsys</Link>{' '}
-          and <Link url="https://domasmark.us">@domasmark</Link>.
+          and <Link url="https://twitter.com/domasmark">@domasmark</Link>.
         </p>
       </article>
     </PageLayout>
