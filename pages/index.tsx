@@ -7,6 +7,7 @@ import { SideNavigation } from '../components/side-navigation/SideNavigation';
 import { PageLayout } from '../components/page-layout';
 import { DeployButton } from '../components/deploy-button/DeployButton';
 import { CardsExample } from '../components/cards-example';
+import { Link } from '../components/link';
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
@@ -35,21 +36,29 @@ const Home: NextPage = () => {
     <PageLayout>
       <article>
         <header>
-          <PageTitle>Documentation website template</PageTitle>
-          <PageSubtitle>
-            Portal template is a free and open source documentation website template. Feel free to
-            clone it on Github, customize per your needs, and use it for your project.
-          </PageSubtitle>
+          <PageTitle>Portal template</PageTitle>
+          <PageSubtitle>A free and open source documentation website template</PageSubtitle>
         </header>
         <p>
-          It’s build with <a href="https://nextjs.org/">Next.js</a> and styled with{' '}
-          <a href="https://tailwindcss.com/">tailwindcss</a>. Every component is customizable using
-          css variables. You’re welcome to visit other pages in this template to learn more about
-          each component in the template. We’ve also added some tips and tricks about what it takes
-          to build a neat documentation portal.
+          Portal template is built with <Link url="https://nextjs.org/">Next.js</Link> and styled
+          with <Link url="https://tailwindcss.com/">tailwindcss</Link>.
+        </p>
+        <p>
+          The layout and every component in the template is{' '}
+          <Link url="/customization">customizable</Link> using predefined css variables. You&apos;re
+          welcome to visit other pages in this template to learn more about each component.
         </p>
         <Heading2>Get started</Heading2>
-        <p>Deploy to Vercel or Netlify:</p>
+        <p>
+          The easiest way to get started is to clone the repository from{' '}
+          <Link url="https://github.com/vrepsys/portal-template">GitHub</Link> and start playing
+          around. You can find the instructions for running the project on our{' '}
+          <Link url="https://github.com/vrepsys/portal-template">GitHub readme</Link>.
+        </p>
+        <p>
+          You can also click the buttons below to clone and deploy the template to Vercel or
+          Netlify.
+        </p>
         <div className="flex gap-2">
           <a className="button primary netlify" href="#">
             <IconNetlify />
@@ -61,17 +70,26 @@ const Home: NextPage = () => {
           </a>
         </div>
         <Heading2>Components</Heading2>
-        <p>Here&apos;s a full list of available components:</p>
         <CardsExample />
         <Heading2>Roadmap</Heading2>
-        <p>We&apos;re working on a Markdoc implementation.</p>
-        <Heading2>Get in touch</Heading2>
         <p>
-          Hey, we&apos;re friendly! We would be happy to learn what you managed to build using this
-          template, hear your feedback, ideas or any other thoughs.
+          While we&apos;re working on expanding and refining the UI components the next big step for
+          us is rendering the documentation contents from Stripe&apos;s{' '}
+          <Link url="https://markdoc.dev">Markdoc</Link>.
         </p>
         <p>
-          Reach out by writing to <a href="mailto:email@email.com">email@email.com</a>
+          Follow us on <Link url="https://github.com/vrepsys/portal-template">Github</Link> or{' '}
+          <Link url="https://twitter.com/vrepsys">Twitter</Link> learn when we add new features.
+        </p>
+        <Heading2>Get in touch</Heading2>
+        <p>
+          We&apos;d be super happy to know if you found this useful or if you used this template for
+          your project.
+        </p>
+        <p>
+          Feel free to drop us a line with your feedback, ideas or if you need help with your
+          documentation. This project was created by <Link url="https://repsys.cc">@vrepsys</Link>{' '}
+          and <Link url="https://domasmark.us">@domasmark</Link>.
         </p>
       </article>
     </PageLayout>
