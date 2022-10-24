@@ -21,7 +21,6 @@ const CalloutPage: NextPage = () => {
           callouts would make ineffective.
         </Callout>
         <Callout type="warning">
-          {' '}
           Please note that callout should be used with caution and should not be overused. Too many
           callouts would make ineffective.
         </Callout>
