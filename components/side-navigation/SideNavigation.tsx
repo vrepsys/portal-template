@@ -10,7 +10,7 @@ export const SideNavigation: React.FC = () => {
         {navigation.map((category) => {
           return (
             <div key={category.title || 'empty'}>
-              <div className="list-headline lg:small">{category.title}</div>
+              <div className="nav-list-headline lg:small">{category.title}</div>
               <ul>
                 {category.items.map((item) => (
                   <li key={`${item.title}-${item.url}`} className="my-0.5">

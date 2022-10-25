@@ -94,35 +94,35 @@ a {
     @apply font-sans text-small text-color-default mt-3 mb-3;
   }
 
-  .content ul,
-  .content ol {
+  .content ul.list,
+  .content ol.list {
     @apply my-3;
   }
-  .content ul li,
-  .content ol li {
+  .content ul.list li,
+  .content ol.list li {
     @apply ml-5;
   }
-  .content ul li::marker {
+  .content ul.list li::marker {
     @apply text-color-tertiary;
   }
-  .content ol li::marker {
+  .content ol.list li::marker {
     @apply text-color-secondary;
   }
-  .content ul ul,
-  .content ol ol {
+  .content ul.list ul,
+  .content ol.list ol {
     @apply my-1;
   }
-  .content li li {
+  .content .list li li {
     @apply ml-6;
   }
-  .content ul li p,
-  .content ol li p {
+  .content ul.list li p,
+  .content ol.list li p {
     @apply my-0 ml-1;
   }
-  .content ul {
+  .content ul.list {
     @apply list-disc;
   }
-  .content ol {
+  .content ol.list {
     @apply list-decimal;
   }
 
@@ -241,10 +241,10 @@ a {
     @apply text-[#0070F3];
   }
 
-  .list-headline {
+  .nav-list-headline {
     @apply text-base font-bold pt-4 pb-2 px-2;
   }
-  .list-headline.small {
+  .nav-list-headline.small {
     @apply text-small font-bold pt-4 pb-2 px-2;
   }
 

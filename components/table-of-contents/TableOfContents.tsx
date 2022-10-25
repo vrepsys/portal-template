@@ -68,7 +68,7 @@ export const TableOfContents: React.FC<Props> = ({ onNavigate }) => {
   }
   return (
     <nav aria-label="Table of contents">
-      <div className="list-headline lg:small">On this page</div>
+      <div className="nav-list-headline lg:small">On this page</div>
       <Headings headings={nestedHeadings} activeId={activeId} navigate={navigateToHeading} />
     </nav>
   );
