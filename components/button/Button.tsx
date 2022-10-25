@@ -1,12 +1,13 @@
 import Link from 'next/link';
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, ReactNode } from 'react';
 import classNames from '../utils/classnames';
 
 interface ButtonProps extends PropsWithChildren {
   to: string;
   selected?: boolean;
-  style: 'default' | 'secondary' | 'search';
+  style?: 'default' | 'secondary' | 'search';
   className: string;
+  icon?: React.FC;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -15,6 +16,7 @@ export const Button: React.FC<ButtonProps> = ({
   selected = false,
   className,
   style = 'default',
+  icon: Icon,
 }) => {
   return (
     <Link href={to} passHref>
@@ -26,6 +28,7 @@ export const Button: React.FC<ButtonProps> = ({
           className
         )}
       >
+        {Icon && <Icon />}
         {children}
       </a>
     </Link>
