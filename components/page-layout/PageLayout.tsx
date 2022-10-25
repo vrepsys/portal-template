@@ -11,7 +11,6 @@ export const PageLayout: React.FC<PropsWithChildren> = ({ children }) => {
     <>
       <Head>
         <title>Portal Template</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <TopNav />
       <div>
