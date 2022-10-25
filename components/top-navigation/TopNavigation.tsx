@@ -3,10 +3,7 @@ import { Fragment } from 'react';
 import { Button } from '../button';
 import { SideNavigation } from '../side-navigation';
 import { TableOfContents } from '../table-of-contents';
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
-}
+import classNames from '../utils/classnames';
 
 const IconGithub: React.FC = () => {
   return (

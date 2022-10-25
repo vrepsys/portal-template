@@ -1,15 +1,12 @@
 import Link from 'next/link';
 import { PropsWithChildren } from 'react';
+import classNames from '../utils/classnames';
 
 interface ButtonProps extends PropsWithChildren {
   to: string;
   selected?: boolean;
   style: 'default' | 'secondary' | 'search';
   className: string;
-}
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
 }
 
 export const Button: React.FC<ButtonProps> = ({
