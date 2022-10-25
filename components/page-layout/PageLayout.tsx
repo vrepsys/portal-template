@@ -2,11 +2,9 @@ import Head from 'next/head';
 import { PropsWithChildren } from 'react';
 import { SideNavigation } from '../side-navigation';
 import { TableOfContents } from '../table-of-contents';
-import { useRouter } from 'next/router';
 import { TopNav } from '../top-navigation';
 
 export const PageLayout: React.FC<PropsWithChildren> = ({ children }) => {
-  const { pathname } = useRouter();
   return (
     <>
       <Head>

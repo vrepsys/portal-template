@@ -5,12 +5,11 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <meta name="viewport" content="width=device-width,initial-scale=1" />
           <link
             rel="icon"
             href={`${
               process.env.NEXT_PUBLIC_BASE_PATH ? process.env.NEXT_PUBLIC_BASE_PATH : ''
-            }/image.png`}
+            }/favicon.png`}
           />
           <meta name="og:title" content="Portal template: kickstart your documentation." />
           <meta
