@@ -6,7 +6,12 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <meta name="viewport" content="width=device-width,initial-scale=1" />
-          <link rel="icon" href="/favicon.png" />
+          <link
+            rel="icon"
+            href={`${
+              process.env.NEXT_PUBLIC_BASE_PATH ? process.env.NEXT_PUBLIC_BASE_PATH : ''
+            }/favicon.png`}
+          />
           <meta name="og:title" content="Portal template: kickstart your documentation." />
           <meta
             name="og:description"
