@@ -33,7 +33,7 @@ const ImagePage: NextPage = () => {
           in the <code>Image</code> component.
         </p>
         <Heading2>Example</Heading2>
-        <CodeBlock language="typescript">
+        <CodeBlock language="javascript">
           {"import exoplanet from 'public/exoplanet.jpeg'\n" +
             `<Image src={exoplanet}\n` +
             `       caption="Artist's impression of K2-18b. K2-18b is now the only super-Earth exoplanet known to host both water and temperatures that could support life. Credit: ESA/Hubble, M. Kornmesser."\n` +

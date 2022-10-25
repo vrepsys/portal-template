@@ -35,7 +35,7 @@ const CodeBlockPage: NextPage = () => {
         </p>
         <Heading2>Example</Heading2>
         <Heading5>Example code:</Heading5>
-        <CodeBlock language="jsx">
+        <CodeBlock language="javascript">
           {'<CodeBlock language="javascript">\n' +
             `   {'const example = "Code block example";\\n' +\n` +
             `    'console.log(example);'}\n` +
