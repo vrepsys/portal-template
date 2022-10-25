@@ -4,6 +4,7 @@ import { PageLayout } from '../components/page-layout';
 import { Heading2, PageSubtitle, PageTitle } from '../components/typography';
 import exoplanet from 'public/exoplanet.jpeg';
 import { CodeBlock } from '../components/code-block';
+import { Link } from '../components/link';
 
 const ImagePage: NextPage = () => {
   return (
@@ -14,12 +15,17 @@ const ImagePage: NextPage = () => {
           <PageSubtitle>Learn about the image component</PageSubtitle>
         </header>
         <p>
-          The <code>Image</code> component is uses a <a href="https://nextjs.org/">Next.js</a>{' '}
-          <a href="https://nextjs.org/docs/api-reference/next/image">image component</a> underneath.
-          As a result the image is always served in a correct size, prevents{' '}
-          <a href="https://nextjs.org/learn/seo/web-performance/cls">Cumulative Layout Shift</a>,
-          ensures faster page loads and comes with{' '}
-          <a href="https://nextjs.org/docs/basic-features/image-optimization">other benefits</a>.
+          The <code>Image</code> component is uses a <Link url="https://nextjs.org/">Next.js</Link>{' '}
+          <Link url="https://nextjs.org/docs/api-reference/next/image">image component</Link>{' '}
+          underneath. As a result the image is always served in a correct size, prevents{' '}
+          <Link url="https://nextjs.org/learn/seo/web-performance/cls">
+            Cumulative Layout Shift
+          </Link>
+          , ensures faster page loads and comes with{' '}
+          <Link url="https://nextjs.org/docs/basic-features/image-optimization">
+            other benefits
+          </Link>
+          .
         </p>
         <p>
           Our image component wraps the image into a <code>figure</code> with an optional{' '}

@@ -1,5 +1,6 @@
 import { NextPage } from 'next';
 import { CodeBlock } from '../components/code-block';
+import { Link } from '../components/link';
 import { PageLayout } from '../components/page-layout';
 import { Heading2, Heading5, PageSubtitle, PageTitle } from '../components/typography';
 
@@ -19,9 +20,9 @@ const CodeBlockPage: NextPage = () => {
         </header>
         <p>
           The <code>CodeBlock</code> component uses{' '}
-          <a href="https://github.com/react-syntax-highlighter/react-syntax-highlighter">
+          <Link url="https://github.com/react-syntax-highlighter/react-syntax-highlighter">
             React Syntax Highlighter
-          </a>{' '}
+          </Link>{' '}
           with a default theme that was designed to match the style of this template.
         </p>
         <p>
@@ -30,7 +31,7 @@ const CodeBlockPage: NextPage = () => {
         </p>
         <p>
           Alternatively, you can use the <code>style</code> property to specify one of the{' '}
-          <a href="https://highlightjs.org">highlight.js</a> styles.
+          <Link url="https://highlightjs.org">highlight.js</Link> styles.
         </p>
         <Heading2>Example</Heading2>
         <Heading5>Example code:</Heading5>

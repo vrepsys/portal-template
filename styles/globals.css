@@ -94,56 +94,52 @@ a {
     @apply font-sans text-small text-color-default mt-3 mb-3;
   }
 
-  article ul,
-  article ol {
+  .content ul,
+  .content ol {
     @apply my-3;
   }
-  article ul li,
-  article ol li {
+  .content ul li,
+  .content ol li {
     @apply ml-5;
   }
-  article ul li::marker {
+  .content ul li::marker {
     @apply text-color-tertiary;
   }
-  article ol li::marker {
+  .content ol li::marker {
     @apply text-color-secondary;
   }
-  article ul ul,
-  article ol ol {
+  .content ul ul,
+  .content ol ol {
     @apply my-1;
   }
-  article li li {
+  .content li li {
     @apply ml-6;
   }
-  article ul li p,
-  article ol li p {
+  .content ul li p,
+  .content ol li p {
     @apply my-0 ml-1;
   }
-  article ul {
+  .content ul {
     @apply list-disc;
   }
-  article ol {
+  .content ol {
     @apply list-decimal;
   }
-  article ul li {
-  }
-  article ol li {
-  }
 
-  article.content hr {
+  .content hr {
     @apply bg-color-divider my-3;
   }
 
-  article p code {
+  .content p code {
     @apply font-mono bg-slate-100 border border-color-divider rounded px-1 font-medium;
   }
-  article a {
+  .content .link a {
     @apply text-indigo-700 border-b border-color-divider;
   }
-  article a:hover {
+  .content .link a:hover {
     @apply text-indigo-800 border-indigo-300 border-b-2;
   }
-  article a:active {
+  .content .link a:active {
     @apply text-indigo-900 border-indigo-400;
   }
 
