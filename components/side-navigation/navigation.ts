@@ -14,12 +14,16 @@ const components: NavItem[] = [
 
 const recipes: NavItem[] = [
   {
-    title: 'Customize styles',
-    url: '/customization',
+    title: 'Create new page',
+    url: '/create-new-page',
   },
   {
-    title: 'Search',
+    title: 'Implement search',
     url: '/search',
+  },
+  {
+    title: 'Customize styles',
+    url: '/customization',
   },
 ];
 

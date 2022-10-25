@@ -1,2 +1,2 @@
-export * from './VercelIcon';
-export * from './NetlifyIcon';
+export * from './IconNetlify';
+export * from './IconVercel';

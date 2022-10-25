@@ -2,6 +2,9 @@ import { NextPage } from 'next';
 import { PageLayout } from '../components/page-layout';
 import { Heading2, PageSubtitle, PageTitle } from '../components/typography';
 import { Table } from '../components/table';
+import { CodeBlock } from '../components/code-block';
+import { Link } from '../components/link';
+
 
 const Typography: NextPage = () => {
   return (
@@ -14,213 +17,154 @@ const Typography: NextPage = () => {
             to use them.
           </PageSubtitle>
         </header>
-        <Table>
+        <Table className='align-middle'>
           <thead>
             <tr>
               <th>Style</th>
               <th>Typeface</th>
               <th>Weight</th>
-              <th>Size desktop</th>
               <th>Size mobile</th>
+              <th>Size desktop</th>
               <th>Letter spacing</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>
-                <h1 className="my-1">H1</h1>
+                <span className="font-serif text-title text-color-default">H1</span>
               </td>
               <td>Source Serif Pro</td>
               <td>Bold</td>
-              <td>36</td>
-              <td>32</td>
-              <td>0.4</td>
+              <td>32 pt</td>
+              <td>36 pt</td>
+              <td>0.4 pt</td>
             </tr>
             <tr>
               <td>
-                <h2 className="my-1">H2</h2>
+                <span className="font-serif text-headline-largest text-color-default">H2</span>
               </td>
               <td>Source Serif Pro</td>
               <td>Bold</td>
-              <td>28</td>
-              <td>24</td>
-              <td>0.4</td>
+              <td>24 pt</td>
+              <td>28 pt</td>
+              <td>0.4 pt</td>
             </tr>
             <tr>
               <td>
-                <h3 className="my-1">H3</h3>
+                <span className="font-serif text-headline-large text-color-default">H3</span>
               </td>
               <td>Source Serif Pro</td>
               <td>Bold</td>
-              <td>24</td>
-              <td>20</td>
-              <td>0.4</td>
+              <td>20 pt</td>
+              <td>24 pt</td>
+              <td>0.4 pt</td>
             </tr>
             <tr>
               <td>
-                <h4 className="my-1">H4</h4>
+                <span className="font-serif text-headline-medium text-color-default">H4</span>
               </td>
               <td>Source Serif Pro</td>
               <td>SemiBold</td>
-              <td>20</td>
-              <td>20</td>
-              <td>0.4</td>
+              <td>20 pt</td>
+              <td>20 pt</td>
+              <td>0.4 pt</td>
             </tr>
             <tr>
               <td>
-                <h5 className="my-1">H5</h5>
+                <span className="font-sans text-headline-small text-color-default">H5</span>
               </td>
               <td>Inter</td>
               <td>SemiBold</td>
-              <td>16</td>
-              <td>16</td>
-              <td>0.8</td>
+              <td>16 pt</td>
+              <td>16 pt</td>
+              <td>0.8 pt</td>
             </tr>
             <tr>
               <td>
-                <h6 className="my-1">H6</h6>
+                <span className="font-sans text-headline-smallest text-color-default">H6</span>
               </td>
               <td>Inter</td>
               <td>SemiBold</td>
-              <td>13</td>
-              <td>13</td>
-              <td>0.8</td>
+              <td>13 pt</td>
+              <td>13 pt</td>
+              <td>0.8 pt</td>
             </tr>
             <tr>
               <td>
-                <p className="text-subtitle text-color-secondary">Subtitle</p>
+                <span className="font-sans text-subtitle text-color-secondary">Subtitle</span>
               </td>
               <td>Inter</td>
               <td>Regular</td>
-              <td>20</td>
-              <td>20</td>
-              <td>0.2</td>
+              <td>20 pt</td>
+              <td>20 pt</td>
+              <td>0.2 pt</td>
             </tr>
             <tr>
               <td>
-                <p className="my-1">Body text</p>
+                <span className="font-sans text-base text-color-default">Body text</span>
               </td>
               <td>Inter</td>
               <td>Regular</td>
-              <td>16</td>
-              <td>16</td>
-              <td>0.2</td>
+              <td>16 pt</td>
+              <td>16 pt</td>
+              <td>0.2 pt</td>
             </tr>
             <tr>
               <td>
-                <p className="my-1">
-                  <small>Small body text</small>
-                </p>
+                <span className="font-sans text-small text-color-default">Small body text</span>
               </td>
               <td>Inter</td>
               <td>Regular</td>
-              <td>13</td>
-              <td>13</td>
-              <td>0.2</td>
+              <td>13 pt</td>
+              <td>13 pt</td>
+              <td>0.2 pt</td>
             </tr>
             <tr>
               <td>
-                <p className="my-1 font-mono font-medium">Code</p>
+                <span className="font-mono text-code text-color-default">Code</span>
               </td>
               <td>Source Code Pro</td>
               <td>Medium</td>
-              <td>16</td>
-              <td>16</td>
-              <td>0.2</td>
-            </tr>
-            <tr>
-              <td>
-                <p className="my-1">
-                  <small className="font-mono font-medium">Code small</small>
-                </p>
-              </td>
-              <td>Source Code Pro</td>
-              <td>Medium</td>
-              <td>13</td>
-              <td>13</td>
-              <td>0.2</td>
+              <td>14 pt</td>
+              <td>14 pt</td>
+              <td>0.2 pt</td>
             </tr>
           </tbody>
         </Table>
-
+        <CodeBlock>
+          {`import \{ NextPage \} from \'next\';\n` +
+            `import \{ PageLayout \} from \'../components/page-layout\';\n` +
+            `import \{ Heading2, PageSubtitle, PageTitle } from \'../components/typography\';\n\n` +
+            `const PageName: NextPage = () => {\n` +
+            `  return (\n` +
+            `    <PageLayout>\n` +
+            `      <article>\n` +
+            `        <header>\n` +
+            `          <PageTitle>Page title</PageTitle>\n` +
+            `          <PageSubtitle>Page subtitle</PageSubtitle>\n` +
+            `        </header>\n` +
+            `        <p>Paragraph</p>\n` +
+            `      </article>\n` +
+            `    </PageLayout>\n` +
+            `  );\n` +
+            `};\n\n` +
+            `export default PageName\n` +
+            ``}
+        </CodeBlock>
         <Heading2>Inline styling</Heading2>
         <p>
-          Paragraph supports these inline styles: <code>code</code>, <mark>marked</mark>,{' '}
-          <strong>bold</strong>, <em>italic</em>, <u>underline</u>, <a href="#">hyperlink</a>.
+          Paragraph supports these inline styles: <code>code</code>, <mark>marked</mark>,
+          <strong>bold</strong>, <em>italic</em>, <u>underline</u>, <Link url="#">hyperlink</Link>.
         </p>
-        <Table>
-          <thead>
-            <tr>
-              <th>Style</th>
-              <th>Code in HTML</th>
-              <th>Code in Markdown</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <code>Code</code>
-              </td>
-              <td>
-                <code>&lt;code&gt;</code>
-              </td>
-              <td>
-                <code>` `</code>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <mark>Marked</mark>
-              </td>
-              <td>
-                <code>&lt;mark&gt;</code>
-              </td>
-              <td>Not defined</td>
-            </tr>
-            <tr>
-              <td>
-                <strong>Bold</strong>
-              </td>
-              <td>
-                <code>&lt;strong&gt;</code>, <code>&lt;b&gt;</code>
-              </td>
-              <td>
-                <code>** **</code>,<code>__ __</code>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <em>Italic</em>
-              </td>
-              <td>
-                <code>&lt;em&gt;</code>, <code>&lt;i&gt;</code>
-              </td>
-              <td>
-                <code>* *</code>,<code>_ _</code>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <u>Underline</u>
-              </td>
-              <td>
-                <code>&lt;u&gt;</code>
-              </td>
-              <td>Not defined</td>
-            </tr>
-            <tr>
-              <td>
-                <a href="#">Hyperlink</a>
-              </td>
-              <td>
-                <code>&lt;a&gt;</code>
-              </td>
-              <td>
-                <code>[text](url)</code>
-              </td>
-            </tr>
-          </tbody>
-        </Table>
+        <CodeBlock language='html'>
+          {"<code>code</code>, <mark>marked</mark>, <strong>bold</strong>, <em>italic</em>, <u>underline</u>, <Link url=\"#\">hyperlink</Link>"}
+        </CodeBlock>
+        <Heading2>Styling styles</Heading2>
+        <p>Change typography sizes in <Link url="https://github.com/vrepsys/portal-template/blob/main/tailwind.config.js#L44" target="_blank">tailwind.config.js</Link>. Colors and margins are located in global.css file.</p>
+        <CodeBlock>
+          Tailwind.config.js
+        </CodeBlock>
+        
       </article>
     </PageLayout>
   );
