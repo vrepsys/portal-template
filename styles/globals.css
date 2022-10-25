@@ -244,12 +244,12 @@ body {
   }
 
   .content .code-block {
-    @apply bg-slate-900
+    @apply bg-slate-800
             text-slate-200
             font-mono
             text-code
             my-3
-            px-5 py-4
+            p-3
             w-full
             overflow-scroll
             border border-slate-900 rounded-lg;

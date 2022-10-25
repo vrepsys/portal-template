@@ -20,8 +20,8 @@ export const TopNav = () => {
             <div className="mx-auto px-3 py-2 border-b border-color-divider lg:border-none lg:px-[var(--width-page-padding)] w-full lg:max-w-tablet xl:max-w-desktop h-14">
               <div className="flex gap-2 items-center">
                 <div className="flex grow gap-2 items-center">
-                  <a className="button" href="#">
-                    Logo
+                  <a className="button font-bold" href="#">
+                    Portal Template
                   </a>
                   <Button className="hidden lg:inline-block w-96" style="search" to={'/search'}>
                     Search
