@@ -21,27 +21,28 @@ const Home: NextPage = () => {
           <PageSubtitle>A free and open source documentation website template</PageSubtitle>
         </header>
         <p>
-          Portal template is built with <Link url="https://nextjs.org/">Next.js</Link> and styled
-          with <Link url="https://tailwindcss.com/">tailwindcss</Link>.
+          Portal template is built with <Link href="https://nextjs.org/">Next.js</Link> and styled
+          with <Link href="https://tailwindcss.com/">tailwindcss</Link>.
         </p>
         <p>
           The layout and every component in the template is{' '}
-          <Link url="/customization">customizable</Link> using predefined css variables. You&apos;re
-          welcome to visit other pages in this template to learn more about each component.
+          <Link href="/customization">customizable</Link> using predefined css variables.
+          You&apos;re welcome to visit other pages in this template to learn more about each
+          component.
         </p>
         <Callout type="info">
           We&apos;d be super happy to know if you found this useful or if you used this template for
           your project. Feel free to drop us a line with your feedback, ideas or if you need help
           with your documentation. This project was created by{' '}
-          <Link url="https://twitter.com/vrepsys">@vrepsys</Link> and{' '}
-          <Link url="https://twitter.com/domasmark">@domasmark</Link>.
+          <Link href="https://twitter.com/vrepsys">@vrepsys</Link> and{' '}
+          <Link href="https://twitter.com/domasmark">@domasmark</Link>.
         </Callout>
         <Heading2>Get started</Heading2>
         <p>
           The easiest way to get started is to clone the repository from{' '}
-          <Link url="https://github.com/vrepsys/portal-template">GitHub</Link> and start playing
+          <Link href="https://github.com/vrepsys/portal-template">GitHub</Link> and start playing
           around. You can find the instructions for running the project on our{' '}
-          <Link url="https://github.com/vrepsys/portal-template">GitHub readme</Link>.
+          <Link href="https://github.com/vrepsys/portal-template">GitHub readme</Link>.
         </p>
         <p>
           You can also click the buttons below to clone and deploy the template to Vercel or
@@ -61,11 +62,11 @@ const Home: NextPage = () => {
         <p>
           While we&apos;re working on expanding and refining the UI components the next big step for
           us is rendering the documentation contents from Stripe&apos;s{' '}
-          <Link url="https://markdoc.dev">Markdoc</Link>.
+          <Link href="https://markdoc.dev">Markdoc</Link>.
         </p>
         <p>
-          Follow us on <Link url="https://github.com/vrepsys/portal-template">Github</Link> or{' '}
-          <Link url="https://twitter.com/vrepsys">Twitter</Link> learn when we add new features.
+          Follow us on <Link href="https://github.com/vrepsys/portal-template">Github</Link> or{' '}
+          <Link href="https://twitter.com/vrepsys">Twitter</Link> learn when we add new features.
         </p>
       </article>
     </PageLayout>

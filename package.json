@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@headlessui/react": "latest",
+    "@headlessui/react": " 1.7.3",
     "material-symbols": "latest",
     "next": "12.3.1",
     "next-transpile-modules": "^9.1.0",

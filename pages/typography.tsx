@@ -5,7 +5,6 @@ import { Table } from '../components/table';
 import { CodeBlock } from '../components/code-block';
 import { Link } from '../components/link';
 
-
 const Typography: NextPage = () => {
   return (
     <PageLayout>
@@ -17,7 +16,7 @@ const Typography: NextPage = () => {
             to use them.
           </PageSubtitle>
         </header>
-        <Table className='align-middle'>
+        <Table className="align-middle">
           <thead>
             <tr>
               <th>Style</th>
@@ -131,7 +130,7 @@ const Typography: NextPage = () => {
             </tr>
           </tbody>
         </Table>
-        <CodeBlock>
+        <CodeBlock language="typescript">
           {`import \{ NextPage \} from \'next\';\n` +
             `import \{ PageLayout \} from \'../components/page-layout\';\n` +
             `import \{ Heading2, PageSubtitle, PageTitle } from \'../components/typography\';\n\n` +
@@ -154,17 +153,27 @@ const Typography: NextPage = () => {
         <Heading2>Inline styling</Heading2>
         <p>
           Paragraph supports these inline styles: <code>code</code>, <mark>marked</mark>,
-          <strong>bold</strong>, <em>italic</em>, <u>underline</u>, <Link url="#">hyperlink</Link>.
+          <strong>bold</strong>, <em>italic</em>, <u>underline</u>, <Link href="#">hyperlink</Link>.
         </p>
-        <CodeBlock language='html'>
-          {"<code>code</code>, <mark>marked</mark>, <strong>bold</strong>, <em>italic</em>, <u>underline</u>, <Link url=\"#\">hyperlink</Link>"}
+        <CodeBlock language="html">
+          {
+            '<code>code</code>, <mark>marked</mark>, <strong>bold</strong>, <em>italic</em>, <u>underline</u>, <Link url="#">hyperlink</Link>'
+          }
         </CodeBlock>
         <Heading2>Styling styles</Heading2>
-        <p>Change typography sizes in <Link url="https://github.com/vrepsys/portal-template/blob/main/tailwind.config.js#L44" target="_blank">tailwind.config.js</Link>. Colors and margins are located in global.css file.</p>
-        <CodeBlock>
-          Tailwind.config.js
-        </CodeBlock>
-        
+        <p>
+          Change typography sizes in{' '}
+          <Link
+            href="https://github.com/vrepsys/portal-template/blob/main/tailwind.config.js#L44"
+            target="_blank"
+          >
+            tailwind.config.js
+          </Link>
+          . Colors and margins are located in global.css file.
+        </p>
+        <p>
+          <code>tailwind.config.js</code>
+        </p>
       </article>
     </PageLayout>
   );

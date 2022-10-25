@@ -18,7 +18,7 @@ const Customization: NextPage = () => {
         </p>
         <Heading2>Fuse.js</Heading2>
         <p>
-          <Link url="https://fusejs.io/">Fuse.js</Link> is a lightweight, but powerful fuzzy search
+          <Link href="https://fusejs.io/">Fuse.js</Link> is a lightweight, but powerful fuzzy search
           library that comes as an npm module. Fuse.js can run purely on front-end and doesn&apos;t
           require a server, or any third-party service.
         </p>
@@ -29,11 +29,11 @@ const Customization: NextPage = () => {
         </p>
         <p>
           You can use the search index in your front-end code to run fuzzy search on your content.
-          Learn more by exploring <Link url="https://fusejs.io/">Fuse.js documentation</Link>.
+          Learn more by exploring <Link href="https://fusejs.io/">Fuse.js documentation</Link>.
         </p>
         <Heading2>Algolia</Heading2>
         <p>
-          <Link url="https://fusejs.io/">Algolia</Link> is a hosted search engine SaaS. You
+          <Link href="https://fusejs.io/">Algolia</Link> is a hosted search engine SaaS. You
           you&apos;ll probably want to use Algolia if you have a lot of content and your search
           index is too large to send over to client-side.
         </p>
@@ -46,7 +46,8 @@ const Customization: NextPage = () => {
           search queries. Or, alternatively, you can use their UI/UX libraries called InstantSearch.
         </p>
         <p>
-          Explore <Link url="https://www.algolia.com/doc/">Algolia&apos;s docs</Link> to learn more.
+          Explore <Link href="https://www.algolia.com/doc/">Algolia&apos;s docs</Link> to learn
+          more.
         </p>
       </article>
     </PageLayout>

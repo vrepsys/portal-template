@@ -15,14 +15,14 @@ const ImagePage: NextPage = () => {
           <PageSubtitle>Learn about the image component</PageSubtitle>
         </header>
         <p>
-          The <code>Image</code> component is uses a <Link url="https://nextjs.org/">Next.js</Link>{' '}
-          <Link url="https://nextjs.org/docs/api-reference/next/image">image component</Link>{' '}
+          The <code>Image</code> component is uses a <Link href="https://nextjs.org/">Next.js</Link>{' '}
+          <Link href="https://nextjs.org/docs/api-reference/next/image">image component</Link>{' '}
           underneath. As a result the image is always served in a correct size, prevents{' '}
-          <Link url="https://nextjs.org/learn/seo/web-performance/cls">
+          <Link href="https://nextjs.org/learn/seo/web-performance/cls">
             Cumulative Layout Shift
           </Link>
           , ensures faster page loads and comes with{' '}
-          <Link url="https://nextjs.org/docs/basic-features/image-optimization">
+          <Link href="https://nextjs.org/docs/basic-features/image-optimization">
             other benefits
           </Link>
           .
