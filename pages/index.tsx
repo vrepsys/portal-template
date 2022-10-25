@@ -49,10 +49,10 @@ const Home: NextPage = () => {
           Netlify.
         </p>
         <div className="flex gap-2">
-          <Button className="button netlify" icon={IconVercel} to={deployNetlifyUrl}>
+          <Button className="button netlify bg-slate-100" icon={IconVercel} to={deployNetlifyUrl}>
             Deploy to Netlify
           </Button>
-          <Button className="button primary vercel" icon={IconNetlify} to={deployVercelUrl}>
+          <Button className="button vercel bg-slate-100" icon={IconNetlify} to={deployVercelUrl}>
             Deploy to Vercel
           </Button>
         </div>
