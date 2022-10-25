@@ -138,43 +138,43 @@ body {
     @apply text-indigo-900 border-indigo-400;
   }
 
-  .content table {
+  .content table.table {
     @apply text-small w-full my-3 border-separate border-spacing-0;
   }
-  .content table th {
+  .content table.table th {
     @apply text-left px-2 py-1 text-color-secondary align-bottom;
   }
-  .content table td {
+  .content table.table td {
     @apply p-2 align-top;
   }
-  .content table tfoot td {
+  .content table.table tfoot td {
     @apply px-2 py-1 text-color-secondary;
   }
-  .content table tbody td {
+  .content table.table tbody td {
     @apply border-b border-color-divider;
   }
-  .content table tbody tr:first-child td {
+  .content table.table tbody tr:first-child td {
     @apply border-t;
   }
-  .content table tbody td:first-child {
+  .content table.table tbody td:first-child {
     @apply border-l;
   }
-  .content table tbody td:last-child {
+  .content table.table tbody td:last-child {
     @apply border-r;
   }
-  .content table tbody tr:nth-child(odd) td {
+  .content table.table tbody tr:nth-child(odd) td {
     @apply bg-slate-50;
   }
-  .content table tbody tr:first-child td:first-child {
+  .content table.table tbody tr:first-child td:first-child {
     @apply rounded-tl-lg;
   }
-  .content table tbody tr:first-child td:last-child {
+  .content table.table tbody tr:first-child td:last-child {
     @apply rounded-tr-lg;
   }
-  .content table tbody tr:last-child td:first-child {
+  .content table.table tbody tr:last-child td:first-child {
     @apply rounded-bl-lg;
   }
-  .content table tbody tr:last-child td:last-child {
+  .content table.table tbody tr:last-child td:last-child {
     @apply rounded-br-lg;
   }
 
@@ -281,7 +281,7 @@ body {
   .code-block .hljs-tag {
     @apply text-red-300;
   }
-  .code-block class-name {
+  .code-block .class-name {
     @apply text-slate-50 underline underline-offset-2;
   }
   .code-block .hljs-boolean {

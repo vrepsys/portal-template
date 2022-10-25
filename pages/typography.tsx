@@ -1,6 +1,7 @@
 import { NextPage } from 'next';
 import { PageLayout } from '../components/page-layout';
 import { Heading2, PageSubtitle, PageTitle } from '../components/typography';
+import { Table } from '../components/table';
 
 const Typography: NextPage = () => {
   return (
@@ -13,7 +14,7 @@ const Typography: NextPage = () => {
             to use them.
           </PageSubtitle>
         </header>
-        <table>
+        <Table>
           <thead>
             <tr>
               <th>Style</th>
@@ -140,14 +141,14 @@ const Typography: NextPage = () => {
               <td>0.2</td>
             </tr>
           </tbody>
-        </table>
+        </Table>
 
         <Heading2>Inline styling</Heading2>
         <p>
           Paragraph supports these inline styles: <code>code</code>, <mark>marked</mark>,{' '}
           <strong>bold</strong>, <em>italic</em>, <u>underline</u>, <a href="#">hyperlink</a>.
         </p>
-        <table>
+        <Table>
           <thead>
             <tr>
               <th>Style</th>
@@ -219,7 +220,7 @@ const Typography: NextPage = () => {
               </td>
             </tr>
           </tbody>
-        </table>
+        </Table>
       </article>
     </PageLayout>
   );
