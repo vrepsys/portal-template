@@ -13,11 +13,6 @@ body {
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 * {
   box-sizing: border-box;
   @apply transition-all duration-150;
@@ -133,53 +128,53 @@ a {
   .content p code {
     @apply font-mono bg-slate-100 border border-color-divider rounded px-1 font-medium;
   }
-  .content .link a {
+  .content a.link {
     @apply text-indigo-700 border-b border-color-divider;
   }
-  .content .link a:hover {
+  .content a.link:hover {
     @apply text-indigo-800 border-indigo-300 border-b-2;
   }
-  .content .link a:active {
+  .content a.link a:active {
     @apply text-indigo-900 border-indigo-400;
   }
 
-  article table {
+  .content table {
     @apply text-small w-full my-3 border-separate border-spacing-0;
   }
-  article table th {
+  .content table th {
     @apply text-left px-2 py-1 text-color-secondary align-bottom;
   }
-  article table td {
+  .content table td {
     @apply p-2 align-top;
   }
-  article table tfoot td {
+  .content table tfoot td {
     @apply px-2 py-1 text-color-secondary;
   }
-  article table tbody td {
+  .content table tbody td {
     @apply border-b border-color-divider;
   }
-  article table tbody tr:first-child td {
+  .content table tbody tr:first-child td {
     @apply border-t;
   }
-  article table tbody td:first-child {
+  .content table tbody td:first-child {
     @apply border-l;
   }
-  article table tbody td:last-child {
+  .content table tbody td:last-child {
     @apply border-r;
   }
-  article table tbody tr:nth-child(odd) td {
+  .content table tbody tr:nth-child(odd) td {
     @apply bg-slate-50;
   }
-  article table tbody tr:first-child td:first-child {
+  .content table tbody tr:first-child td:first-child {
     @apply rounded-tl-lg;
   }
-  article table tbody tr:first-child td:last-child {
+  .content table tbody tr:first-child td:last-child {
     @apply rounded-tr-lg;
   }
-  article table tbody tr:last-child td:first-child {
+  .content table tbody tr:last-child td:first-child {
     @apply rounded-bl-lg;
   }
-  article table tbody tr:last-child td:last-child {
+  .content table tbody tr:last-child td:last-child {
     @apply rounded-br-lg;
   }
 
