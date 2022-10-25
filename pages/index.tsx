@@ -1,7 +1,8 @@
 import type { NextPage } from 'next';
 import { Button } from '../components/button';
+import { Callout } from '../components/callout';
 import { CardsExample } from '../components/cards-example';
-import { NetlifyIcon, VercelIcon } from '../components/icons';
+import { IconNetlify, IconVercel } from '../components/icons';
 import { Link } from '../components/link';
 import { PageLayout } from '../components/page-layout';
 import { PageSubtitle, PageTitle } from '../components/typography';
@@ -28,6 +29,13 @@ const Home: NextPage = () => {
           <Link url="/customization">customizable</Link> using predefined css variables. You&apos;re
           welcome to visit other pages in this template to learn more about each component.
         </p>
+        <Callout type="info">
+          We&apos;d be super happy to know if you found this useful or if you used this template for
+          your project. Feel free to drop us a line with your feedback, ideas or if you need help
+          with your documentation. This project was created by{' '}
+          <Link url="https://twitter.com/vrepsys">@vrepsys</Link> and{' '}
+          <Link url="https://twitter.com/domasmark">@domasmark</Link>.
+        </Callout>
         <Heading2>Get started</Heading2>
         <p>
           The easiest way to get started is to clone the repository from{' '}
@@ -40,10 +48,10 @@ const Home: NextPage = () => {
           Netlify.
         </p>
         <div className="flex gap-2">
-          <Button className="button netlify" icon={VercelIcon} to={deployNetlifyUrl}>
+          <Button className="button netlify" icon={IconVercel} to={deployNetlifyUrl}>
             Deploy to Netlify
           </Button>
-          <Button className="button primary vercel" icon={NetlifyIcon} to={deployVercelUrl}>
+          <Button className="button primary vercel" icon={IconNetlify} to={deployVercelUrl}>
             Deploy to Vercel
           </Button>
         </div>
@@ -58,16 +66,6 @@ const Home: NextPage = () => {
         <p>
           Follow us on <Link url="https://github.com/vrepsys/portal-template">Github</Link> or{' '}
           <Link url="https://twitter.com/vrepsys">Twitter</Link> learn when we add new features.
-        </p>
-        <Heading2>Get in touch</Heading2>
-        <p>
-          We&apos;d be super happy to know if you found this useful or if you used this template for
-          your project.
-        </p>
-        <p>
-          Feel free to drop us a line with your feedback, ideas or if you need help with your
-          documentation. This project was created by <Link url="https://repsys.cc">@vrepsys</Link>{' '}
-          and <Link url="https://twitter.com/domasmark">@domasmark</Link>.
         </p>
       </article>
     </PageLayout>

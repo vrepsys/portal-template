@@ -49,6 +49,10 @@ export const TopNav = () => {
                   </Popover.Button>
                 </div>
                 <div className="hidden lg:flex lg:gap-2 lg:items-center lg:shrink lg:justify-end">
+                  <a className="button" href="https://www.producthunt.com/products">
+                    <IconGithub />
+                    Product Hunt
+                  </a>
                   <a className="button" href="https://github.com/vrepsys/portal-template">
                     <IconGithub />
                     GitHub
@@ -66,6 +70,13 @@ export const TopNav = () => {
               <Button className="w-full" style="search" to={'/search'}>
                 Search
               </Button>
+              <a
+                className="button w-full justify-center"
+                href="https://www.producthunt.com/products"
+              >
+                <IconGithub />
+                Product Hunt
+              </a>
               <a
                 className="button w-full justify-center"
                 href="https://github.com/vrepsys/portal-template"
