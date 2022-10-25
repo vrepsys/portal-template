@@ -11,7 +11,7 @@ class MyDocument extends Document {
               process.env.NEXT_PUBLIC_BASE_PATH ? process.env.NEXT_PUBLIC_BASE_PATH : ''
             }/favicon.png`}
           />
-          <meta name="og:title" content="Portal template: kickstart your documentation." />
+          <meta name="og:title" content="Portal template: kickstart your documentation" />
           <meta
             name="og:description"
             content="A customizable template for best-in-class documentation. Powered by Next.js and Tailwind."
