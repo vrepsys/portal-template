@@ -2,8 +2,8 @@ import { HTMLAttributes } from 'react';
 
 export const Heading5: React.FC<HTMLAttributes<HTMLHeadingElement>> = ({ children, ...props }) => {
   return (
-    <h5 className="heading-5" {...props}>
+    <h6 className="heading-6" {...props}>
       {children}
-    </h5>
+    </h6>
   );
 };

@@ -66,37 +66,31 @@ a {
 }
 
 @layer components {
-  article h1,
-  h1.page-title {
+  .content h1.page-title {
     @apply font-serif text-title-mobile lg:text-title text-color-default mb-3 scroll-mt-16;
   }
-  article h2,
-  h2.heading-2 {
+  .content h2.heading-2 {
     @apply font-serif text-headline-largest-mobile lg:text-headline-largest text-color-default mt-6 lg:mt-8 mb-3 scroll-mt-16;
   }
-  article h3,
-  h3.heading-3 {
+  .content h3.heading-3 {
     @apply font-serif text-headline-large-mobile lg:text-headline-large text-color-default mt-6 lg:mt-8 mb-3 scroll-mt-16;
   }
-  article h4,
-  h4.heading-4 {
+  .content h4.heading-4 {
     @apply font-serif text-headline-medium text-color-default mt-6 mb-3 scroll-mt-16;
   }
-  article h5,
-  h5.heading-5 {
+  .content h5.heading-5 {
     @apply font-sans text-headline-small text-color-default	mt-6 mb-3 scroll-mt-16;
   }
-  article h6,
-  h6.heading-6 {
+  .content h6.heading-6 {
     @apply font-sans text-headline-smallest text-color-default mt-6 mb-3 scroll-mt-16;
   }
-  p.page-subtitle {
+  .content p.page-subtitle {
     @apply font-sans text-subtitle text-color-secondary mt-3 mb-8;
   }
-  article p {
+  .content p {
     @apply font-sans text-base text-color-default mt-3 mb-3;
   }
-  article p small {
+  .content p small {
     @apply font-sans text-small text-color-default mt-3 mb-3;
   }
 
@@ -136,7 +130,7 @@ a {
   article ol li {
   }
 
-  article hr {
+  article.content hr {
     @apply bg-color-divider my-3;
   }
 

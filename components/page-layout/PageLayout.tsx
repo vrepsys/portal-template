@@ -26,7 +26,7 @@ export const PageLayout: React.FC<PropsWithChildren> = ({ children }) => {
             </div>
             <SideNavigation />
           </div>
-          <main className="pb-96 pt-8 lg:pt-12 min-w-0">{children}</main>
+          <main className="content pb-96 pt-8 lg:pt-12 min-w-0">{children}</main>
           <aside className="hidden xl:block border-r-color-divider sticky top-14 pt-8 pl-2 overflow-y-scroll h-[calc(100vh_-_theme(spacing.14))] lg:pr-[var(--width-page-padding)]">
             <TableOfContents />
           </aside>

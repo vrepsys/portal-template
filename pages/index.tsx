@@ -1,17 +1,9 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
-import { Popover } from '@headlessui/react';
-import { Heading2 } from '../components/typography/heading2';
-import { Heading3, Heading4, Heading5, PageSubtitle, PageTitle } from '../components/typography';
-import { SideNavigation } from '../components/side-navigation/SideNavigation';
-import { PageLayout } from '../components/page-layout';
-import { DeployButton } from '../components/deploy-button/DeployButton';
 import { CardsExample } from '../components/cards-example';
 import { Link } from '../components/link';
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
-}
+import { PageLayout } from '../components/page-layout';
+import { PageSubtitle, PageTitle } from '../components/typography';
+import { Heading2 } from '../components/typography/heading2';
 
 const IconNetlify: React.FC = () => {
   return (
@@ -34,7 +26,7 @@ const IconVercel: React.FC = () => {
 const Home: NextPage = () => {
   return (
     <PageLayout>
-      <article className="content">
+      <article>
         <header>
           <PageTitle>Portal template</PageTitle>
           <PageSubtitle>A free and open source documentation website template</PageSubtitle>
