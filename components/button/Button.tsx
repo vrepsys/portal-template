@@ -6,7 +6,7 @@ interface ButtonProps extends PropsWithChildren {
   to: string;
   selected?: boolean;
   style?: 'default' | 'secondary' | 'search';
-  className: string;
+  className?: string;
   icon?: React.FC;
 }
 
@@ -14,7 +14,7 @@ export const Button: React.FC<ButtonProps> = ({
   to,
   children,
   selected = false,
-  className,
+  className = '',
   style = 'default',
   icon: Icon,
 }) => {
@@ -24,7 +24,7 @@ export const Button: React.FC<ButtonProps> = ({
         className={classNames(
           selected ? 'selected' : '',
           style !== 'default' ? style : '',
-          'block button',
+          'button',
           className
         )}
       >
