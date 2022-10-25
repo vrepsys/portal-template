@@ -10,7 +10,7 @@ class MyDocument extends Document {
             rel="icon"
             href={`${
               process.env.NEXT_PUBLIC_BASE_PATH ? process.env.NEXT_PUBLIC_BASE_PATH : ''
-            }/favicon.png`}
+            }/image.png`}
           />
           <meta name="og:title" content="Portal template: kickstart your documentation." />
           <meta
@@ -21,7 +21,12 @@ class MyDocument extends Document {
             name="description"
             content="A customizable template for best-in-class documentation. Powered by Next.js and Tailwind."
           />
-          <meta property="og:image" content="/social-share.png" />
+          <meta
+            property="og:image"
+            content={`${
+              process.env.NEXT_PUBLIC_BASE_PATH ? process.env.NEXT_PUBLIC_BASE_PATH : ''
+            }/social-share.png`}
+          />
         </Head>
         <body>
           <Main />

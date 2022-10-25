@@ -10,11 +10,7 @@ export const PageLayout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <>
       <Head>
-        <title>Portal Docs Template</title>
-        <meta
-          name="description"
-          content="A Next.js template to get started with your documentation portal"
-        />
+        <title>Portal Template</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <TopNav />
