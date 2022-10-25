@@ -4,6 +4,7 @@ import { Heading2, Heading3, Heading4, Heading5, PageSubtitle, PageTitle } from 
 import { Table } from '../components/table';
 import { CodeBlock } from '../components/code-block';
 import { Link } from '../components/link';
+import { List } from '../components/list';
 
 const Typography: NextPage = () => {
   return (
@@ -77,13 +78,13 @@ const Typography: NextPage = () => {
             </tr>
           </tbody>
         </Table>
-        <Heading2>Add text</Heading2>
-        <p>Import all text style components from typography folder:</p>
+        <Heading2>Add headlines</Heading2>
+        <p>Import all text style components from <Link target="_blank" href="https://github.com/vrepsys/portal-template/tree/main/components/typography">typography</Link> folder:</p>
         <CodeBlock language='javascript'>
           {`import \{ PageTitle, PageSubtitle, Heading2, Heading3, Heading4, Heading5, Heading6 } from \'../components/typography\';`}
         </CodeBlock>
         <p><code>{"<h1>"}</code>- <code>{"<h6>"}</code> HTML tags and a subtitle paragraph use components. Components take care of indexing the titles. Paragraphs and inline styles use plain HTML.</p>
-        <p>Make sure page title and subtitle components are added to <code>{"<header/>"}</code> tag:</p>
+        <p>Make sure page title and subtitle components are added inside <code>{"<header/>"}</code> tag:</p>
         <CodeBlock language='javascript'>
           {`` +
           `<header> \n` +
@@ -103,39 +104,54 @@ const Typography: NextPage = () => {
           ``}
         </CodeBlock>
 
-        <Heading3>Inline elements</Heading3>
+        <Heading2>Add body text</Heading2>
+        <p>Parapgrahs are added using plain HTML <code>{"<p/>"}</code> tag.</p>
+        <Heading3>Inline styles</Heading3>
         <p>
-          Use these inline styles:
+          Inline styles are added using plain HTML. Defined inline styles:
         </p>
-        <CodeBlock language='html'>
-          {`` +
-          `<code>code</code>\n` +
-          `<mark>marked</mark>\n` +
-          `<strong>bold</strong>\n` +
-          `<em>italic</em>\n` +
-          `<u>underline</u>\n` +
-          ``}
-        </CodeBlock>
-        <ul>
-          <li><code>code</code></li>
-          <li><mark>marked</mark></li>
-          <li><strong>bold</strong></li>
-          <li><em>italic</em></li>
-          <li><u>underline</u></li>
-        </ul>
-        <p><Link url="#">Hyperlinks</Link> use Next.js component that allows easy linking between internal pages. It has to be imported from:</p>
+        <Table>
+          <thead>
+            <tr>
+              <th>Style</th>
+              <th>HTML tag</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>Code</code></td>
+              <td><code>{"<code/>"}</code></td>
+            </tr>
+            <tr>
+              <td><mark>Marked</mark></td>
+              <td><code>{"<mark/>"}</code></td>
+            </tr>
+            <tr>
+              <td><strong>Bold</strong></td>
+              <td><code>{"<strong/>"}</code></td>
+            </tr>
+            <tr>
+              <td><em>Italic</em></td>
+              <td><code>{"<em/>"}</code></td>
+            </tr>
+            <tr>
+              <td><u>Underline</u></td>
+              <td><code>{"<u/>"}</code></td>
+            </tr>
+          </tbody>
+        </Table>
+        <Heading3>Hyperlinks</Heading3>
+        <p><Link href="#hyperlinks">Hyperlinks</Link> use Next.js component that allows easy linking between internal pages.<br/> Import it from:</p>
         <CodeBlock language='html'>
           {`import { Link } from '../components/link';`}
         </CodeBlock>
-        <p>Once imported it's used like this:</p>
-        <CodeBlock language='html'>
+        <p>Link component supports all <code>{"<a/>"}</code> tag <Link target="_blank" href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attributes'>attributes</Link>. Use it like this:</p>        <CodeBlock language='html'>
           {`` +
-          `<Link url="/your-page-name">hyperlink</Link>\n` +
+          `<Link href="/your-page-name">hyperlink</Link>\n` +
           ``}
         </CodeBlock>
-        <Heading2>Customize text style</Heading2>
-        <p>Adjust typography style and size in <Link url="https://github.com/vrepsys/portal-template/blob/main/tailwind.config.js#L44" target="_blank">tailwind.config.js</Link> file. Text colors and margins should be adjusted in <Link url="#">global.css</Link> file.</p>
-        <p>These are default values:</p>
+        <Heading2>Customize text styles</Heading2>
+        <p>Adjust typography style and size in <Link target="_blank" href="https://github.com/vrepsys/portal-template/blob/main/tailwind.config.js#L44">tailwind.config.js</Link> file. Text colors and margins can be adjusted from <Link target="_blank" href="https://github.com/vrepsys/portal-template/blob/main/styles/globals.css">global.css</Link> file. Here are the default values:</p>
         <Table className='align-middle'>
           <thead>
             <tr>
@@ -144,7 +160,7 @@ const Typography: NextPage = () => {
               <th>Weight</th>
               <th>Size mobile</th>
               <th>Size desktop</th>
-              <td>Letter spacing</td>
+              <th>Letter spacing</th>
             </tr>
           </thead>
           <tbody>
@@ -154,7 +170,7 @@ const Typography: NextPage = () => {
               <td>Bold</td>
               <td>32 pt</td>
               <td>36 pt</td>
-              <td>0.2 pt</td>
+              <td>0.4 pt</td>
             </tr>
             <tr>
               <td>text-headline-largest</td>
@@ -162,7 +178,7 @@ const Typography: NextPage = () => {
               <td>Bold</td>
               <td>24 pt</td>
               <td>28 pt</td>
-              <td>0.2 pt</td>
+              <td>0.4 pt</td>
             </tr>
             <tr>
               <td>text-headline-large</td>
@@ -170,7 +186,7 @@ const Typography: NextPage = () => {
               <td>Bold</td>
               <td>20 pt</td>
               <td>24 pt</td>
-              <td>0.2 pt</td>
+              <td>0.4 pt</td>
             </tr>
             <tr>
               <td>text-headline-medium</td>
@@ -178,7 +194,7 @@ const Typography: NextPage = () => {
               <td>SemiBold</td>
               <td>20 pt</td>
               <td>20 pt</td>
-              <td>0.2 pt</td>
+              <td>0.4 pt</td>
             </tr>
             <tr>
               <td>text-headline-small</td>
@@ -186,7 +202,7 @@ const Typography: NextPage = () => {
               <td>SemiBold</td>
               <td>16 pt</td>
               <td>16 pt</td>
-              <td>0.2 pt</td>
+              <td>0.8 pt</td>
             </tr>
             <tr>
               <td>text-headline-smallest</td>
@@ -194,7 +210,7 @@ const Typography: NextPage = () => {
               <td>SemiBold</td>
               <td>13 pt</td>
               <td>13 pt</td>
-              <td>0.2 pt</td>
+              <td>0.8 pt</td>
             </tr>
             <tr>
               <td>text-subtitle</td>
@@ -230,9 +246,6 @@ const Typography: NextPage = () => {
             </tr>
           </tbody>
         </Table>
-        <CodeBlock>
-          Tailwind.config.js
-        </CodeBlock>
       </article>
     </PageLayout>
   );
