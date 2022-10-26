@@ -53,7 +53,7 @@ const CodeBlockPage: NextPage = () => {
           >
             globals.css
           </Link>{' '}
-          file by changing <code>hljs-</code> css classes.
+          file by changing the <code>.code-block</code> css classes.
         </p>
         <p>
           Alternatively, you can use the <code>style</code> property to specify one of the{' '}
