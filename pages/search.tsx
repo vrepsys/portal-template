@@ -9,7 +9,7 @@ const Customization: NextPage = () => {
       <article>
         <header>
           <PageTitle>Search</PageTitle>
-          <PageSubtitle>How you can implement search</PageSubtitle>
+          <PageSubtitle>Two ways to implement search.</PageSubtitle>
         </header>
         <p>
           If you kickstart your documentation from Portal template you&apos;ll probably want to

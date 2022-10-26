@@ -11,7 +11,9 @@ const Customization: NextPage = () => {
       <article>
         <header>
           <PageTitle>Customize styles</PageTitle>
-          <PageSubtitle>Learn how to customize the styles to match your brand</PageSubtitle>
+          <PageSubtitle>
+            Learn how to customize template&apos;s styles to match your brand.
+          </PageSubtitle>
         </header>
         <p>
           To change the template&apos;s appearance you&apos;ll want to modify the{' '}

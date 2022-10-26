@@ -1,5 +1,5 @@
 import { NextPage } from 'next';
-import {Link} from '../components/link';
+import { Link } from '../components/link';
 import { CodeBlock } from '../components/code-block';
 import { PageLayout } from '../components/page-layout';
 import { Table } from '../components/table';
@@ -11,9 +11,12 @@ const TablePage: NextPage = () => {
       <article>
         <header>
           <PageTitle>Table</PageTitle>
-          <PageSubtitle>Learn about Table component and how to use it.</PageSubtitle>
+          <PageSubtitle>Everything you need to know about the Table component.</PageSubtitle>
         </header>
-        <p>Table component lists data in columns and rows. The component is a mix of react and HTML tags. This is how it looks like:</p>
+        <p>
+          Table component lists data in columns and rows. The component is a mix of react and HTML
+          tags. This is how it looks like:
+        </p>
         <Table>
           <thead>
             <tr>
@@ -48,37 +51,58 @@ const TablePage: NextPage = () => {
           </tfoot>
         </Table>
         <Heading2>Add table</Heading2>
-        <p>Import the component from the <Link target="_blank" href="https://github.com/vrepsys/portal-template/tree/main/components/table">table</Link> folder:</p>
-        <CodeBlock language='javascript'>
+        <p>
+          Import the component from the{' '}
+          <Link
+            target="_blank"
+            href="https://github.com/vrepsys/portal-template/tree/main/components/table"
+          >
+            table
+          </Link>{' '}
+          folder:
+        </p>
+        <CodeBlock language="javascript">
           {"import { Table } from '../components/table';"}
         </CodeBlock>
-        <p>The parent tag is converted to react, everything else is plain HTML. This way you can add additional control to the component when needed:</p>
-        <CodeBlock language='javascript'>
+        <p>
+          The parent tag is converted to react, everything else is plain HTML. This way you can add
+          additional control to the component when needed:
+        </p>
+        <CodeBlock language="javascript">
           {`` +
-          `<Table>\n` +
-          `  <thead>\n` +
-          `    <tr>\n` +
-          `      <th>Name</th>\n` +
-          `      <th>Code</th>\n` +
-          `      <th>Distance</th>\n` +
-          `    </tr>\n` +
-          `  </thead>\n` +
-          `  <tbody>\n` +
-          `    <tr>\n` +
-          `      <th>Mars</th>\n` +
-          `      <th>Red</th>\n` +
-          `      <th>97.689</th>\n` +
-          `    </tr>\n` +
-          `    ...\n` +
-          `  </tbody>\n` +
-          `  <tfoot>\n` +
-          `    ...\n` +
-          `  </foot>\n` +
-          `</Table>` +
-          ``}
+            `<Table>\n` +
+            `  <thead>\n` +
+            `    <tr>\n` +
+            `      <th>Name</th>\n` +
+            `      <th>Code</th>\n` +
+            `      <th>Distance</th>\n` +
+            `    </tr>\n` +
+            `  </thead>\n` +
+            `  <tbody>\n` +
+            `    <tr>\n` +
+            `      <th>Mars</th>\n` +
+            `      <th>Red</th>\n` +
+            `      <th>97.689</th>\n` +
+            `    </tr>\n` +
+            `    ...\n` +
+            `  </tbody>\n` +
+            `  <tfoot>\n` +
+            `    ...\n` +
+            `  </foot>\n` +
+            `</Table>` +
+            ``}
         </CodeBlock>
         <Heading2>Customize table style</Heading2>
-        <p>Adjust the table visual style in the <Link target="_blank" href="https://github.com/vrepsys/portal-template/blob/main/styles/globals.css">global.css</Link> file.</p>
+        <p>
+          Adjust the table visual style in the{' '}
+          <Link
+            target="_blank"
+            href="https://github.com/vrepsys/portal-template/blob/main/styles/globals.css"
+          >
+            global.css
+          </Link>{' '}
+          file.
+        </p>
       </article>
     </PageLayout>
   );

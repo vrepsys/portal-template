@@ -12,7 +12,7 @@ const ListsPage: NextPage = () => {
       <article>
         <header>
           <PageTitle>Lists</PageTitle>
-          <PageSubtitle>Learn about List component and how to use it.</PageSubtitle>
+          <PageSubtitle>Learn about the List component and how to use it.</PageSubtitle>
         </header>
         <p>
           List component shows text in the list. Underneath it should contain <code>ul</code> and{' '}

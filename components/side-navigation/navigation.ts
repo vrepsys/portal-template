@@ -14,7 +14,7 @@ const components: NavItem[] = [
 
 const recipes: NavItem[] = [
   {
-    title: 'Create new page',
+    title: 'Create a new page',
     url: '/create-new-page',
   },
   {

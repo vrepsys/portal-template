@@ -18,7 +18,7 @@ const Home: NextPage = () => {
       <article>
         <header>
           <PageTitle>Portal template</PageTitle>
-          <PageSubtitle>A free and open-source documentation website template</PageSubtitle>
+          <PageSubtitle>A free and open-source documentation website template.</PageSubtitle>
         </header>
         <p>
           Portal template is built with <Link href="https://nextjs.org/">Next.js</Link> and styled

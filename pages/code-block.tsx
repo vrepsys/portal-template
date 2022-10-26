@@ -10,7 +10,7 @@ const CodeBlockPage: NextPage = () => {
       <article>
         <header>
           <PageTitle>Code block</PageTitle>
-          <PageSubtitle>Learn how the CodeBlock component works and how to use it.</PageSubtitle>
+          <PageSubtitle>Learn how to use the CodeBlock component.</PageSubtitle>
         </header>
         <p>
           The <code>CodeBlock</code> component uses{' '}

@@ -11,7 +11,7 @@ const CalloutPage: NextPage = () => {
       <article>
         <header>
           <PageTitle>Callout</PageTitle>
-          <PageSubtitle>Learn about Callout component and how to use it</PageSubtitle>
+          <PageSubtitle>Learn about the Callout component and how to use it.</PageSubtitle>
         </header>
         <p>
           Callout component has a distinct look meant to draw reader&apos;s attention, so that

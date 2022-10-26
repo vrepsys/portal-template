@@ -12,7 +12,7 @@ const ImagePage: NextPage = () => {
       <article>
         <header>
           <PageTitle>Image</PageTitle>
-          <PageSubtitle>Learn about the image component and its usage.</PageSubtitle>
+          <PageSubtitle>Learn how to use the the image component.</PageSubtitle>
         </header>
         <p>
           The <code>Image</code> component is uses a <Link href="https://nextjs.org/">Next.js</Link>{' '}
