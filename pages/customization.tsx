@@ -1,8 +1,9 @@
 import { NextPage } from 'next';
+import { CodeBlock } from '../components/code-block';
 import { Link } from '../components/link';
 import { PageLayout } from '../components/page-layout';
 import { Table } from '../components/table';
-import { Heading2, PageSubtitle, PageTitle } from '../components/typography';
+import { Heading2, Heading3, PageSubtitle, PageTitle } from '../components/typography';
 
 const Customization: NextPage = () => {
   return (
@@ -19,7 +20,7 @@ const Customization: NextPage = () => {
           </Link>{' '}
           file where most of the styles are defined.
         </p>
-        <p>The page layout and core colors are defined in css variables.</p>
+        <p>The page layout and core colors are defined in the following css variables.</p>
         <Table>
           <thead>
             <tr>
@@ -102,7 +103,31 @@ const Customization: NextPage = () => {
             </tr>
           </tbody>
         </Table>
-
+        <Heading3>Customize components</Heading3>
+        <p>
+          You can customize how components look by modifying the css classes or changing the
+          tailwind theme defined in{' '}
+          <Link href="https://github.com/vrepsys/portal-template/blob/main/tailwind.config.js">
+            tailwind.config.js
+          </Link>
+          .
+        </p>
+        <p>
+          For example, to change the appearance of the page subtitle modify the following class in{' '}
+          <Link href="https://github.com/vrepsys/portal-template/blob/main/styles/globals.css">
+            styles/global.css
+          </Link>{' '}
+        </p>
+        <CodeBlock language="typescript">
+          {`.content p.page-subtitle {\n` +
+            `   @apply font-sans text-subtitle text-color-secondary mt-3 mb-8;\n` +
+            `}`}
+        </CodeBlock>
+        <p>The apply rule above uses styles defined in tailwind to style the subheading.</p>
+        <p>
+          Alternatively, instead of changing the <code>page-subtitle</code> css class you can adjust
+          the style by making changes to the tailwind theme.
+        </p>
         <Heading2>Customize page layout</Heading2>
         <p>
           For more advanced changes feel free to modify the React components. For example, to change
