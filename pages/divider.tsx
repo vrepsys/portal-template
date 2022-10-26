@@ -10,7 +10,7 @@ const DividerPage: NextPage = () => {
       <article>
         <header>
           <PageTitle>Divider</PageTitle>
-          <PageSubtitle>Learn more about the divider component and how to use it.</PageSubtitle>
+          <PageSubtitle>Learn about the divider component and how to use it.</PageSubtitle>
         </header>
         <p>
           Divider is meant to separate the article into multiple sections. It&apos;s plain HTML
