@@ -10,16 +10,16 @@ const CreatingNewPagePage: NextPage = () => {
     <PageLayout>
       <article>
         <header>
-          <PageTitle>Creating new page</PageTitle>
-          <PageSubtitle>Learn how to add a new page using portal-template.</PageSubtitle>
+          <PageTitle>How to create a new page</PageTitle>
+          <PageSubtitle>Learn how to use the Layout component to create new pages.</PageSubtitle>
         </header>
         <p>
-          Create a new <code>your-page-name.tsx</code> file in{' '}
+          Create a new <code>your-page-name.tsx</code> file in the{' '}
           <Link href="https://github.com/vrepsys/portal-template/tree/main/pages" target="_blank">
             pages
           </Link>{' '}
-          folder. Then import <code>NextPage</code> and <code>PageLayout</code> components to the
-          new file:
+          folder and import the dependencies. In Next.js the file name represents the url slug for
+          the page.
         </p>
         <CodeBlock language="typescript">
           {`import \{ NextPage \} from \'next\';\n` +
@@ -27,35 +27,38 @@ const CreatingNewPagePage: NextPage = () => {
             ``}
         </CodeBlock>
         <p>
-          Create NextJS const. Add <code>{'<article>'}</code> and <code>{'<header>'}</code> inside:
+          Create a NextPage that wraps your content in a <code>{'<PageLayout>'}</code>. Start by
+          adding a page title and a subtitle.
         </p>
         <CodeBlock language="typescript">
-          {`` +
-            `const YourPageName: NextPage = () => {\n` +
+          {`const YourPageName: NextPage = () => {\n` +
             `  return (\n` +
             `    <PageLayout>\n` +
             `      <article>\n` +
-            `        <header>Your page header</header>\n` +
-            `        Your page content\n` +
+            `        <header>\n` +
+            `           <PageTitle>Your page title</PageTitle>\n` +
+            `           <PageSubtitle>Page subtitle</PageSubtitle> \n` +
+            `        </header>\n` +
+            `        <p>Your page content goes here.</p>\n` +
             `      </article>\n` +
             `    </PageLayout>\n` +
             `  );\n` +
-            `};\n` +
-            ``}
+            `};\n`}
         </CodeBlock>
-        <p>Export your NextJS const</p>
+        <p>Export your the page</p>
         <CodeBlock language="typescript">{`` + `export default YourPageName;\n` + ``}</CodeBlock>
-        <Heading2>Add to the sidebar</Heading2>
+        <Heading2>Add your page to the sidebar</Heading2>
         <p>
-          Open{' '}
+          Navigation items and item groups are defined in{' '}
           <Link href="https://github.com/vrepsys/portal-template/blob/main/components/side-navigation/navigation.ts">
-            navigation.ts
-          </Link>{' '}
-          file. The file exports list categories. Each cateogry has its navigation items:
+            side-navigation/navigation.ts
+          </Link>
+          . To add a new item to the sidebar we&apos;ll create a new items group. Start by defining
+          items for the new group:
         </p>
         <CodeBlock language="typescript">
           {`` +
-            `const YourListGroupName: NavItem[] = [\n` +
+            `const newItems: NavItem[] = [\n` +
             `  { title: 'Your new page', url: '/your-new-page' },\n` +
             `  { title: 'Some other page', url: '/some-other-page' },\n` +
             `  ...\n` +
@@ -63,85 +66,23 @@ const CreatingNewPagePage: NextPage = () => {
             ``}
         </CodeBlock>
         <p>
-          <code>title</code> declares what will be shown for the user in the sidebar.{' '}
+          The <code>title</code> property represents the navigation item text in the sidebar.{' '}
           <code>url</code> is the name of a file saved in{' '}
           <Link href="https://github.com/vrepsys/portal-template/tree/main/pages">pages</Link>{' '}
           folder.
         </p>
-        <p>Assign your page to a category or declare it directly in export constant:</p>
+        <p>
+          For the new group to show up in the navigation add a new item to the{' '}
+          <code>navigation</code> array:
+        </p>
         <CodeBlock language="typescript">
           {`` +
             `export const navigation: Category[] = [\n` +
-            `  { items: [{title: "Your new page", url: "/your-new-page"}]},\n` +
-            `  { title: 'Your list group name', items: YourListGroupName },\n` +
+            `  { title: 'Title for the new group', items: newItems },\n` +
+            `  ...\n` +
             `];\n` +
             ``}
         </CodeBlock>
-        <Heading2>Customize page layout</Heading2>
-        <p>
-          Adjust the page layout spacing using variables in{' '}
-          <Link href="https://github.com/vrepsys/portal-template/blob/main/styles/globals.css">
-            global.css
-          </Link>{' '}
-          file.
-        </p>
-        <Table>
-          <thead>
-            <tr>
-              <th>Variable</th>
-              <th>Default value</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <code>--width-page-article-column</code>
-              </td>
-              <td>
-                <code>15rem</code>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <code>--width-page-table-of-contents-column</code>
-              </td>
-              <td>
-                <code>15rem</code>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <code>--width-page-column-gap</code>
-              </td>
-              <td>
-                <code>3.5rem</code>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <code>--width-page-padding</code>
-              </td>
-              <td>
-                <code>2.5rem</code>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <code>--width-page-padding-mobile</code>
-              </td>
-              <td>
-                <code>1.25rem</code>
-              </td>
-            </tr>
-          </tbody>
-        </Table>
-        <p>
-          For other changes customize{' '}
-          <Link href="https://github.com/vrepsys/portal-template/blob/main/components/page-layout/PageLayout.tsx">
-            PageLayout.tsx
-          </Link>{' '}
-          file.
-        </p>
       </article>
     </PageLayout>
   );
