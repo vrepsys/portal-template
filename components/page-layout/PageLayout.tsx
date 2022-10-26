@@ -12,7 +12,7 @@ export const PageLayout: React.FC<PropsWithChildren> = ({ children }) => {
       </Head>
       <TopNav />
       <div>
-        <div className="mx-auto px-[var(--width-page-padding-mobile)] max-w-mobile flex justify-center lg:grid lg:gap-14 lg:grid-cols-page-tablet lg:pr-[var(--width-page-padding)] lg:max-w-tablet xl:px-0 xl:grid-cols-page-desktop xl:max-w-desktop">
+        <div className="mx-auto px-[var(--width-page-padding-mobile)] max-w-mobile flex justify-center lg:grid lg:gap-[var(--width-page-column-gap)] lg:grid-cols-page-tablet lg:pl-0 lg:pr-[var(--width-page-column-gap)] lg:max-w-tablet xl:px-0 xl:grid-cols-page-desktop xl:max-w-desktop">
           <div className="hidden lg:block border-r border-r-color-divider sticky top-14 pt-8 pr-2 overflow-y-scroll h-[calc(100vh_-_theme(spacing.14))] lg:pl-[var(--width-page-padding)]">
             <div className="hidden lg:block xl:hidden">
               <TableOfContents />

@@ -1,7 +1,7 @@
 import { Popover } from '@headlessui/react';
 import { Fragment } from 'react';
 import { Button } from '../button';
-import { IconGithub, IconProductHunt } from '../icons';
+import { IconGithub, IconProductHunt, IconDismiss, IconMenu } from '../icons';
 import { SideNavigation } from '../side-navigation';
 import { TableOfContents } from '../table-of-contents';
 import classNames from '../utils/classnames';
@@ -18,7 +18,7 @@ export const TopNav = () => {
             )}
           >
             <div className="mx-auto px-3 py-2 border-b border-color-divider lg:border-none lg:px-[var(--width-page-padding)] w-full lg:max-w-tablet xl:max-w-desktop h-14">
-              <div className="flex gap-2 items-center">
+              <div className="flex gap-2 items-center h-full">
                 <div className="flex grow gap-2 items-center">
                   <a className="button font-bold" href="#">
                     Portal Template
@@ -32,9 +32,9 @@ export const TopNav = () => {
                   <Popover.Button className="button w-9 h-9 flex justify-center items-center">
                     <span className="sr-only">Open menu</span>
                     {open ? (
-                      <span className="material-symbols-outlined">close</span>
+                      <IconDismiss/>
                     ) : (
-                      <span className="material-symbols-outlined">menu</span>
+                      <IconMenu/>
                     )}
                   </Popover.Button>
                 </div>
@@ -58,10 +58,10 @@ export const TopNav = () => {
               <Button className="w-full" style="search" to={'/search'}>
                 Search
               </Button>
-              <Button icon={IconProductHunt} to="https://www.producthunt.com/products">
+              <Button className='w-full justify-center' icon={IconProductHunt} to="https://www.producthunt.com/products">
                 Product Hunt
               </Button>
-              <Button icon={IconGithub} to="https://github.com/vrepsys/portal-template">
+              <Button className='w-full justify-center' icon={IconGithub} to="https://github.com/vrepsys/portal-template">
                 GitHub
               </Button>
             </div>
