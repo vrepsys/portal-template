@@ -11,7 +11,6 @@ import {
 import { Table } from '../components/table';
 import { CodeBlock } from '../components/code-block';
 import { Link } from '../components/link';
-import { List } from '../components/list';
 
 const Typography: NextPage = () => {
   return (
@@ -164,7 +163,7 @@ const Typography: NextPage = () => {
           </Link>{' '}
           folder:
         </p>
-        <CodeBlock language="javascript">
+        <CodeBlock language="typescript">
           {`import \{ PageTitle, PageSubtitle, Heading2, Heading3, Heading4, Heading5, Heading6 } from \'../components/typography\';`}
         </CodeBlock>
         <p>
@@ -175,14 +174,14 @@ const Typography: NextPage = () => {
           Make sure page title and subtitle components wrapped inside a <code>{'<header>'}</code>{' '}
           tag:
         </p>
-        <CodeBlock language="javascript">
+        <CodeBlock language="tsx">
           {`<header> \n` +
             ` <PageTitle>Your page title</PageTitle> \n` +
             ` <PageSubtitle>Your page subtitle</PageSubtitle> \n` +
             `</header>`}
         </CodeBlock>
         <p>Add headlines using these components:</p>
-        <CodeBlock language="javascript">
+        <CodeBlock language="tsx">
           {`<Heading2>Your headline</Heading2> \n` +
             `<Heading3>Your headline</Heading3> \n` +
             `<Heading4>Your headline</Heading4> \n` +
@@ -251,7 +250,7 @@ const Typography: NextPage = () => {
           enables page pre-caching for internal pages.
           <br /> Import it from:
         </p>
-        <CodeBlock language="html">{`import { Link } from '../components/link';`}</CodeBlock>
+        <CodeBlock language="typescript">{`import { Link } from '../components/link';`}</CodeBlock>
         <p>
           <code>Link</code> component passes all{' '}
           <Link
@@ -262,7 +261,7 @@ const Typography: NextPage = () => {
           </Link>{' '}
           down to the <code>{'<a>'}</code> tag . Use it like this:
         </p>{' '}
-        <CodeBlock language="html">
+        <CodeBlock language="tsx">
           {`` + `<Link href="/your-page-name">hyperlink</Link>\n` + ``}
         </CodeBlock>
         <Heading2>Customize text styles</Heading2>

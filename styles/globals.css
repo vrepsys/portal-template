@@ -128,6 +128,9 @@ body {
   .content p code {
     @apply font-mono text-slate-800 bg-slate-50 border border-color-divider rounded px-1;
   }
+  .content td code {
+    @apply font-mono text-slate-800 bg-slate-50 border border-color-divider rounded px-1;
+  }
   .content a.link {
     @apply text-indigo-700 border-b border-color-divider;
   }
@@ -359,5 +362,21 @@ body {
   }
   .content .code-block .hljs-italic {
     font-style: italic;
+  }
+
+  .content .code-block .tag {
+    @apply text-orange-300 no-underline;
+  }
+  .content .code-block .punctuation {
+    @apply text-orange-300 no-underline;
+  }
+  .content .code-block .attr-value.punctuation {
+    @apply text-orange-300 no-underline;
+  }
+  .content .code-block .attr-value {
+    @apply text-indigo-300 no-underline;
+  }
+  .content .code-block .string {
+    @apply text-indigo-300 no-underline;
   }
 }
