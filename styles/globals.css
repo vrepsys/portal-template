@@ -365,18 +365,28 @@ body {
   }
 
   .content .code-block .tag {
-    @apply text-orange-300 no-underline;
+    @apply text-indigo-300 no-underline;
   }
+
   .content .code-block .punctuation {
-    @apply text-orange-300 no-underline;
+    @apply text-indigo-300 no-underline;
+  }
+  .content .code-block .tag.punctuation.attr-equals {
+    @apply text-slate-50 no-underline;
+  }
+  .content .code-block .tag.attr-name {
+    @apply text-slate-50 no-underline;
+  }
+  .content .code-block .console.class-name {
+    @apply no-underline;
   }
   .content .code-block .attr-value.punctuation {
-    @apply text-orange-300 no-underline;
+    @apply text-orange-200 no-underline;
   }
   .content .code-block .attr-value {
-    @apply text-indigo-300 no-underline;
+    @apply text-orange-200 no-underline;
   }
   .content .code-block .string {
-    @apply text-indigo-300 no-underline;
+    @apply text-orange-200 no-underline;
   }
 }

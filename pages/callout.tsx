@@ -33,8 +33,8 @@ const CalloutPage: NextPage = () => {
           Specify the callout style using the <code>type</code> prop. It supports 4 values:{' '}
           <code>info</code>,<code>caution</code>,<code>warning</code>,<code>success</code>:
         </p>
-        <CodeBlock language="typescript">
-          {`` + `<Callout type="info">\n` + `  Callout message\n` + `</Callout>` + ``}
+        <CodeBlock language="tsx">
+          {`<Callout type="info">\n` + `  Callout message\n` + `</Callout>`}
         </CodeBlock>
         <p>Examples:</p>
         <Callout type="info">Info — hint or general information.</Callout>

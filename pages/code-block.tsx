@@ -55,10 +55,6 @@ const CodeBlockPage: NextPage = () => {
           </Link>{' '}
           file by changing the <code>.code-block</code> css classes.
         </p>
-        <p>
-          Alternatively, you can use the <code>style</code> property to specify one of the{' '}
-          <Link href="https://highlightjs.org">highlight.js</Link> styles.
-        </p>
       </article>
     </PageLayout>
   );
