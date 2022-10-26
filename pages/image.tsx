@@ -2,7 +2,7 @@ import { NextPage } from 'next';
 import { Image } from '../components/image';
 import { PageLayout } from '../components/page-layout';
 import { Heading2, PageSubtitle, PageTitle } from '../components/typography';
-import exoplanet from 'public/exoplanet.jpeg';
+import url from 'public/exoplanet.jpeg';
 import { CodeBlock } from '../components/code-block';
 import { Link } from '../components/link';
 
@@ -12,7 +12,7 @@ const ImagePage: NextPage = () => {
       <article>
         <header>
           <PageTitle>Image</PageTitle>
-          <PageSubtitle>Learn about the image component</PageSubtitle>
+          <PageSubtitle>Learn about the image component and its usage.</PageSubtitle>
         </header>
         <p>
           The <code>Image</code> component is uses a <Link href="https://nextjs.org/">Next.js</Link>{' '}
@@ -25,28 +25,30 @@ const ImagePage: NextPage = () => {
           <Link href="https://nextjs.org/docs/basic-features/image-optimization">
             other benefits
           </Link>
-          .
+          . This is how the image component looks like:
         </p>
-        <p>
-          Our image component wraps the image into a <code>figure</code> with an optional{' '}
-          <code>figcaption</code>. The caption may be specified using the <code>caption</code> prop
-          in the <code>Image</code> component.
-        </p>
-        <Heading2>Example</Heading2>
-        <CodeBlock language="javascript">
-          {"import exoplanet from 'public/exoplanet.jpeg'\n" +
-            `<Image src={exoplanet}\n` +
-            `       caption="Artist's impression of K2-18b. K2-18b is now the only super-Earth exoplanet known to host both water and temperatures that could support life. Credit: ESA/Hubble, M. Kornmesser."\n` +
-            `       alt="A big blue planet on the right with its star and a moon visible on the left"\n` +
-            '/>'}
-        </CodeBlock>
         <Image
           alt="A big blue planet on the right with its star and a moon visible on the left"
           caption="Artist's impression of K2-18b. K2-18b is now the only super-Earth exoplanet known to
             host both water and temperatures that could support life. Credit: ESA/Hubble, M.
             Kornmesser."
-          src={exoplanet}
+          src={url}
         />
+        <Heading2>Add Image</Heading2>
+        <p>Import <code>Image</code> component from <Link target="_blank" href="https://github.com/vrepsys/portal-template/tree/main/components/image">image</Link> folder and the source of the image:</p>
+        <CodeBlock language='javascript'>
+          {"import { Image } from '../components/image';\n" +
+          "import source from 'public/exoplanet.jpeg';"}
+          </CodeBlock>
+        <p>Image component wraps the image into a <code>figure</code> with an optional <code>figcaption</code>. The caption may be specified using the <code>caption</code> prop:</p>
+        <CodeBlock language="javascript">
+          {"<Image src={source}\n" +
+            `  caption="Artist's impression of K2-18b. K2-18b is now the only super-Earth exoplanet known to host both water and temperatures that could support life. Credit: ESA/Hubble, M. Kornmesser."\n` +
+            `  alt="A big blue planet on the right with its star and a moon visible on the left"\n` +
+            '/>'}
+        </CodeBlock>
+        <Heading2>Customize image style</Heading2>
+        <p>Open <Link href="https://github.com/vrepsys/portal-template/blob/main/components/image/Image.tsx">Image.tsx</Link> file to customize component's appearance.</p>
       </article>
     </PageLayout>
   );
