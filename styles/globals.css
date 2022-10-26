@@ -131,6 +131,9 @@ body {
   .content td code {
     @apply font-mono text-slate-800 bg-slate-50 border border-color-divider rounded px-1;
   }
+  .content .callout code {
+    @apply font-mono text-slate-800 bg-slate-50 border border-color-divider rounded px-1;
+  }
   .content a.link {
     @apply text-indigo-700 border-b border-color-divider;
   }

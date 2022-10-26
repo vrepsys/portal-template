@@ -24,7 +24,7 @@ const COLOR_MAP: Record<CalloutType, string> = {
 export const Callout: React.FC<Props> = ({ type, children }) => {
   return (
     <div
-      className={`my-3 px-3 py-2 rounded-lg border grid grid-cols-[20px_1fr] gap-3 ${COLOR_MAP[type]}`}
+      className={`callout my-3 px-3 py-2 rounded-lg border grid grid-cols-[20px_1fr] gap-3 ${COLOR_MAP[type]}`}
     >
       {ICON_MAP[type]}
       <div className="text-color-default font-sans text-small">{children}</div>
