@@ -45,7 +45,7 @@ const ImagePage: NextPage = () => {
           </Link>{' '}
           folder and the source of the image:
         </p>
-        <CodeBlock language="javascript">
+        <CodeBlock language="typescript">
           {"import { Image } from '../components/image';\n" +
             "import source from 'public/exoplanet.jpeg';"}
         </CodeBlock>
@@ -53,7 +53,7 @@ const ImagePage: NextPage = () => {
           Image component wraps the image into a <code>figure</code> with an optional{' '}
           <code>figcaption</code>. The caption may be specified using the <code>caption</code> prop:
         </p>
-        <CodeBlock language="javascript">
+        <CodeBlock language="tsx">
           {'<Image src={source}\n' +
             `  caption="Artist's impression of K2-18b. K2-18b is now the only super-Earth exoplanet known to host both water and temperatures that could support life. Credit: ESA/Hubble, M. Kornmesser."\n` +
             `  alt="A big blue planet on the right with its star and a moon visible on the left"\n` +

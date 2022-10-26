@@ -61,14 +61,14 @@ const TablePage: NextPage = () => {
           </Link>{' '}
           folder:
         </p>
-        <CodeBlock language="javascript">
+        <CodeBlock language="typescript">
           {"import { Table } from '../components/table';"}
         </CodeBlock>
         <p>
           The parent tag is converted to react, everything else is plain HTML. This way you can add
           additional control to the component when needed:
         </p>
-        <CodeBlock language="javascript">
+        <CodeBlock language="tsx">
           {`` +
             `<Table>\n` +
             `  <thead>\n` +

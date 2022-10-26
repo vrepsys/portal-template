@@ -20,7 +20,7 @@ const CodeBlockPage: NextPage = () => {
           with a default theme that was designed to match the style of this template. This is how it
           looks like:
         </p>
-        <CodeBlock language="javascript">
+        <CodeBlock language="typescript">
           {'const example = "Code block example";\n' + 'console.log(example);'}
         </CodeBlock>
         <Heading2>Add code block</Heading2>
@@ -32,14 +32,14 @@ const CodeBlockPage: NextPage = () => {
           ></Link>
           code-block folder:
         </p>
-        <CodeBlock language="javascript">
+        <CodeBlock language="typescript">
           {"import { CodeBlock } from '../components/code-block';"}
         </CodeBlock>
         <p>
           Specify the code snippet language using <code>language</code> prop:
         </p>
-        <CodeBlock language="javascript">
-          {'<CodeBlock language="javascript">\n' +
+        <CodeBlock language="tsx">
+          {'<CodeBlock language="tsx">\n' +
             `   {'const example = "Code block example";\\n' +\n` +
             `    'console.log(example);'}\n` +
             '</CodeBlock>'}

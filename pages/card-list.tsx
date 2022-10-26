@@ -17,7 +17,7 @@ const CardsPage: NextPage = () => {
           To render cards use the <code>CardList</code>, and <code>Card</code> components.
         </p>
         <p>Here&apos;s a code example:</p>
-        <CodeBlock language="typescript">
+        <CodeBlock language="tsx">
           {'<CardList>\n' +
             '   <Card title="Typography" subtitle="Get familiar with typography components" image="typography.png" url="/typography" />\n' +
             '   <Card title="List" subtitle="Learn how lists work" image="list.png" url="/list" />\n' +

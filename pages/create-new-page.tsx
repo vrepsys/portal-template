@@ -30,7 +30,7 @@ const CreatingNewPagePage: NextPage = () => {
           Create a NextPage that wraps your content in a <code>{'<PageLayout>'}</code>. Start by
           adding a page title and a subtitle.
         </p>
-        <CodeBlock language="typescript">
+        <CodeBlock language="tsx">
           {`const YourPageName: NextPage = () => {\n` +
             `  return (\n` +
             `    <PageLayout>\n` +

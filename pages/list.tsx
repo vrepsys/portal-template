@@ -40,11 +40,11 @@ const ListsPage: NextPage = () => {
           </Link>{' '}
           folder:
         </p>
-        <CodeBlock language="javascript">{"import { List } from '../components/list';"}</CodeBlock>
+        <CodeBlock language="typescript">{"import { List } from '../components/list';"}</CodeBlock>
         <p>
           Component ordered and unordered lists. Control it with <code>type</code> prop:
         </p>
-        <CodeBlock language="javascript">
+        <CodeBlock language="tsx">
           {`` +
             `<List type="ordered">\n` +
             `  <li><p>Buy the groceries</p></li>\n` +
