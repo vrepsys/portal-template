@@ -31,15 +31,14 @@ export const TopNav = () => {
                 <div className="shrink lg:hidden">
                   <Popover.Button className="button w-9 h-9 flex justify-center items-center">
                     <span className="sr-only">Open menu</span>
-                    {open ? (
-                      <IconDismiss/>
-                    ) : (
-                      <IconMenu/>
-                    )}
+                    {open ? <IconDismiss /> : <IconMenu />}
                   </Popover.Button>
                 </div>
                 <div className="hidden lg:flex lg:gap-2 lg:items-center lg:shrink lg:justify-end">
-                  <Button icon={IconProductHunt} to="https://www.producthunt.com/products">
+                  <Button
+                    icon={IconProductHunt}
+                    to="https://www.producthunt.com/posts/portal-template"
+                  >
                     Product Hunt
                   </Button>
                   <Button icon={IconGithub} to="https://github.com/vrepsys/portal-template">
@@ -58,10 +57,18 @@ export const TopNav = () => {
               <Button className="w-full" style="search" to={'/search'}>
                 Search
               </Button>
-              <Button className='w-full justify-center' icon={IconProductHunt} to="https://www.producthunt.com/products">
+              <Button
+                className="w-full justify-center"
+                icon={IconProductHunt}
+                to="https://www.producthunt.com/posts/portal-template"
+              >
                 Product Hunt
               </Button>
-              <Button className='w-full justify-center' icon={IconGithub} to="https://github.com/vrepsys/portal-template">
+              <Button
+                className="w-full justify-center"
+                icon={IconGithub}
+                to="https://github.com/vrepsys/portal-template"
+              >
                 GitHub
               </Button>
             </div>
