@@ -5,9 +5,9 @@ import { Link } from '../components/link';
 import { CodeBlock } from '../components/code-block';
 import { PageLayout } from '../components/page-layout';
 import { Heading2, PageSubtitle, PageTitle } from '../components/typography';
-import image1 from 'public/cards/typography.png';
-import image2 from 'public/cards/list.png';
-import image3 from 'public/cards/image.png';
+import image1 from 'public/cards/mars.png';
+import image2 from 'public/cards/jupiter.png';
+import image3 from 'public/cards/saturn.png';
 
 const CardsPage: NextPage = () => {
   return (
