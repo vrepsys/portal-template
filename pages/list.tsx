@@ -15,8 +15,8 @@ const ListsPage: NextPage = () => {
           <PageSubtitle>Learn about the List component and how to use it.</PageSubtitle>
         </header>
         <p>
-          List component shows text in the list. Underneath it should contain <code>ul</code> and{' '}
-          <code>ol</code> html tags. This is how the component looks like:
+          The <code>List</code> is a wrapper around styled <code>ul</code> and <code>ol</code> html
+          tags. This is how it looks like:
         </p>
         <List>
           <li>
@@ -31,7 +31,7 @@ const ListsPage: NextPage = () => {
         </List>
         <Heading2>Add list</Heading2>
         <p>
-          Import the component from{' '}
+          Import the component from the{' '}
           <Link
             target="_blank"
             href="https://github.com/vrepsys/portal-template/tree/main/components/list"
@@ -42,7 +42,8 @@ const ListsPage: NextPage = () => {
         </p>
         <CodeBlock language="typescript">{"import { List } from '../components/list';"}</CodeBlock>
         <p>
-          Component ordered and unordered lists. Control it with <code>type</code> prop:
+          The component accepts a <code>type</code> property which must have a value of either{' '}
+          <code>ordered</code> or <code>unordered</code>:
         </p>
         <CodeBlock language="tsx">
           {`` +
@@ -70,25 +71,24 @@ const ListsPage: NextPage = () => {
           </li>
         </List>
         <Callout type="warning">
-          List component doesn&apos;t support <code>ol</code> tag{' '}
+          List component doesn&apos;t accept html{' '}
           <Link
             target="_blank"
             href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol#attributes"
           >
             attributes
-          </Link>
-          .
+          </Link>{' '}
+          for the <code>ol</code> and <code>ul</code> tags. This is a todo.{' '}
         </Callout>
         <Heading2>Customize list style</Heading2>
         <p>
-          Adjust list style in the{' '}
+          Adjust the appearance in{' '}
           <Link
             target="_blank"
             href="https://github.com/vrepsys/portal-template/blob/main/styles/globals.css"
           >
             global.css
-          </Link>{' '}
-          file.
+          </Link>
         </p>
       </article>
     </PageLayout>
