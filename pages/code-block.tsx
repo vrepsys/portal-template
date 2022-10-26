@@ -55,6 +55,11 @@ const CodeBlockPage: NextPage = () => {
           </Link>{' '}
           file by changing the <code>.code-block</code> css classes.
         </p>
+        <p>
+          Alternatively you can pass a predefined <Link href="https://prismjs.com/">prism.js</Link>{' '}
+          or <Link href="https://highlightjs.org/">higlight.js</Link> theme using the{' '}
+          <code>style</code> property.
+        </p>
       </article>
     </PageLayout>
   );
