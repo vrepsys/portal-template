@@ -1,7 +1,9 @@
 import { NextPage } from 'next';
+import {Link} from '../components/link';
+import { CodeBlock } from '../components/code-block';
 import { PageLayout } from '../components/page-layout';
 import { Table } from '../components/table';
-import { PageSubtitle, PageTitle } from '../components/typography';
+import { Heading2, PageSubtitle, PageTitle } from '../components/typography';
 
 const TablePage: NextPage = () => {
   return (
@@ -9,58 +11,74 @@ const TablePage: NextPage = () => {
       <article>
         <header>
           <PageTitle>Table</PageTitle>
-          <PageSubtitle>Learn more about table components in this template</PageSubtitle>
+          <PageSubtitle>Learn about Table component and how to use it.</PageSubtitle>
         </header>
-        <p>Table is pretty neat. Let&apos;s have mor of it.</p>
+        <p>Table component lists data in columns and rows. The component is a mix of react and HTML tags. This is how it looks like:</p>
         <Table>
           <thead>
             <tr>
-              <th>Feature</th>
-              <th>Description</th>
-              <th>Required capabilities</th>
+              <th>Name</th>
+              <th>Code</th>
+              <th>Distance</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>
-                <code>card_issuing</code>
-              </td>
-              <td>Allows the creation of a Card object associated with this financial account.</td>
-              <td>
-                <code>card_issuing</code>
-              </td>
+              <td>Mars</td>
+              <td>Red</td>
+              <td>97.689</td>
             </tr>
             <tr>
-              <td>
-                <code>deposit_insurance</code>
-              </td>
-              <td>Requests FDIC insurance eligibility for the financial account.</td>
-              <td>
-                <code>treasury</code>
-              </td>
+              <td>Jupiter</td>
+              <td>Big</td>
+              <td>611.92</td>
             </tr>
             <tr>
-              <td>
-                <code>financial_addresses.aba </code>
-              </td>
-              <td>
-                Triggers the creation of a <strong>FinancialAddress</strong> object of type ABA
-                associated with this financial account. When this feature is active, the address can
-                receive money over ACH or wire, and external bank accounts can debit it.
-              </td>
-              <td>
-                <code>treasury</code>
-              </td>
+              <td>Saturn</td>
+              <td>Ring</td>
+              <td>1 424.8</td>
             </tr>
           </tbody>
           <tfoot>
             <tr>
-              <td>Sum</td>
-              <td>5000</td>
-              <td>30</td>
+              <td></td>
+              <td>Total:</td>
+              <td>2 134.409</td>
             </tr>
           </tfoot>
         </Table>
+        <Heading2>Add table</Heading2>
+        <p>Import the component from the <Link target="_blank" href="https://github.com/vrepsys/portal-template/tree/main/components/table">table</Link> folder:</p>
+        <CodeBlock language='javascript'>
+          {"import { Table } from '../components/table';"}
+        </CodeBlock>
+        <p>The parent tag is converted to react, everything else is plain HTML. This way you can add additional control to the component when needed:</p>
+        <CodeBlock language='javascript'>
+          {`` +
+          `<Table>\n` +
+          `  <thead>\n` +
+          `    <tr>\n` +
+          `      <th>Name</th>\n` +
+          `      <th>Code</th>\n` +
+          `      <th>Distance</th>\n` +
+          `    </tr>\n` +
+          `  </thead>\n` +
+          `  <tbody>\n` +
+          `    <tr>\n` +
+          `      <th>Mars</th>\n` +
+          `      <th>Red</th>\n` +
+          `      <th>97.689</th>\n` +
+          `    </tr>\n` +
+          `    ...\n` +
+          `  </tbody>\n` +
+          `  <tfoot>\n` +
+          `    ...\n` +
+          `  </foot>\n` +
+          `</Table>` +
+          ``}
+        </CodeBlock>
+        <Heading2>Customize table style</Heading2>
+        <p>Adjust the table visual style in the <Link target="_blank" href="https://github.com/vrepsys/portal-template/blob/main/styles/globals.css">global.css</Link> file.</p>
       </article>
     </PageLayout>
   );

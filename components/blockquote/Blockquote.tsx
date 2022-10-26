@@ -7,7 +7,7 @@ interface Props extends PropsWithChildren {
 
 export const Blockquote: React.FC<Props> = ({ cite, caption, children }) => {
   return (
-    <figure>
+    <figure className='my-3'>
       <blockquote cite={cite} className="border-l-2 pl-4 border-color-tertiary">
         {typeof children === 'string' ? <p className="text-medium">{children}</p> : children}
       </blockquote>
