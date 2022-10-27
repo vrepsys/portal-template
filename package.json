@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@headlessui/react": " 1.7.3",
+    "body-scroll-lock": "^4.0.0-beta.0",
     "material-symbols": "latest",
     "next": "12.3.1",
     "next-transpile-modules": "^9.1.0",
@@ -19,6 +20,7 @@
     "slugify": "^1.6.5"
   },
   "devDependencies": {
+    "@types/body-scroll-lock": "^3.1.0",
     "@types/node": "18.8.4",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
